@@ -1,0 +1,377 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2022 replay file
+# Internal Version: 2021_09_15-23.27.30 176069
+# Run by r-sur on Thu Dec  7 10:27:10 2023
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=209.401031494141, 
+    height=130.905090332031)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Project2.cae')
+#: A new model database has been created.
+#: The model "Model-1" has been created.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+#* MdbError: incompatible release number, expected 2022, got 2020
+upgradeMdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/Project2-2020.cae", 
+    "C:/Users/r-sur/OneDrive/Desktop/Suresh1/Project2.cae", )
+#: The model database "C:\Users\r-sur\OneDrive\Desktop\Suresh1\Project2_TEMP.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+#: The model database has been saved to "C:\Users\r-sur\OneDrive\Desktop\Suresh1\Project2.cae".
+#: The model database "C:\Users\r-sur\OneDrive\Desktop\Suresh1\Project2-2020.cae" has been converted.
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+o3 = session.openOdb(name='C:/Users/r-sur/OneDrive/Desktop/Suresh1/XX.odb')
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/XX.odb", 
+    "C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb", )
+from  abaqus import session
+o7 = session.openOdb('C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb')
+#: Model: C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb'])
+o3 = session.openOdb(name='C:/Users/r-sur/OneDrive/Desktop/Suresh1/XY.odb')
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/XY.odb", 
+    "C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb", )
+from  abaqus import session
+o7 = session.openOdb('C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb')
+#: Model: C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb'])
+o3 = session.openOdb(name='C:/Users/r-sur/OneDrive/Desktop/Suresh1/XZ.odb')
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/XZ.odb", 
+    "C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb", )
+from  abaqus import session
+o7 = session.openOdb('C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb')
+#: Model: C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb'])
+o3 = session.openOdb(name='C:/Users/r-sur/OneDrive/Desktop/Suresh1/YY.odb')
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/YY.odb", 
+    "C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb", )
+from  abaqus import session
+o7 = session.openOdb('C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb')
+#: Model: C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          4
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb'])
+o3 = session.openOdb(name='C:/Users/r-sur/OneDrive/Desktop/Suresh1/YZ.odb')
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/YZ.odb", 
+    "C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb", )
+from  abaqus import session
+o7 = session.openOdb('C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb')
+#: Model: C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb'])
+o3 = session.openOdb(name='C:/Users/r-sur/OneDrive/Desktop/Suresh1/ZZ.odb')
+#* OdbError: The database is from a previous release of Abaqus. 
+#* Run abaqus -upgrade -job <newFileName> -odb <oldOdbFileName> to upgrade it.
+from  abaqus import session
+session.upgradeOdb("C:/Users/r-sur/OneDrive/Desktop/Suresh1/ZZ.odb", 
+    "C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb", )
+from  abaqus import session
+o7 = session.openOdb('C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb')
+#: Model: C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o7)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.7886, 
+    farPlane=48.5897, width=25.6228, height=11.6324, cameraPosition=(30.0576, 
+    13.4465, 21.1888), cameraUpVector=(-0.465955, 0.718528, -0.516337), 
+    cameraTarget=(0.209787, -0.419582, 5.20979))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.9177, 
+    farPlane=48.253, width=21.3927, height=9.71199, viewOffsetX=0.56231, 
+    viewOffsetY=-0.182139)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=INTEGRATION_POINT, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=WHOLE_ELEMENT, variable=(('EVOL', WHOLE_ELEMENT), ), 
+    stepFrame=SPECIFY)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.4625, 
+    farPlane=47.7083, width=19.3159, height=8.76913, viewOffsetX=-0.0765154, 
+    viewOffsetY=-0.294737)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XX1701925097.797.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=ELEMENT_CENTROID, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XY1701925120.729.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=ELEMENT_CENTROID, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_UNDEF, CONTOURS_ON_DEF, ))
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/XZ1701925128.866.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=ELEMENT_CENTROID, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YY1701925137.019.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=ELEMENT_CENTROID, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/YZ1701925142.082.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=ELEMENT_CENTROID, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.odbs['C:/Users/r-sur/AppData/Local/Temp/ZZ1701925147.75.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=ELEMENT_CENTROID, variable=(('E', INTEGRATION_POINT, ((
+    COMPONENT, 'E11'), (COMPONENT, 'E22'), (COMPONENT, 'E33'), (COMPONENT, 
+    'E12'), (COMPONENT, 'E13'), (COMPONENT, 'E23'), )), ), stepFrame=SPECIFY)

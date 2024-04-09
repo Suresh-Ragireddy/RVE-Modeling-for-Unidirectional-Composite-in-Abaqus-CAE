@@ -1,0 +1,5 @@
+# Save by r-sur on 2023_12_07-10.27.25; build 2022 2021_09_15-23.27.30 176069
+from abaqus import *
+upgradeMdb('C:/Users/r-sur/OneDrive/Desktop/Suresh1/Project2-2020.cae', 
+    'C:/Users/r-sur/OneDrive/Desktop/Suresh1/Project2.cae')
+# Save by r-sur on 2023_12_07-10.27.25; build 2022 2021_09_15-23.27.30 176069

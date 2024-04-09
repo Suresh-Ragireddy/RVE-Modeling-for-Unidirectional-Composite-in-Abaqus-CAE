@@ -1,0 +1,1496 @@
+1
+
+   Abaqus 2020                                  Date 05-Dec-2023   Time 17:10:47
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DESKTOP-6ISLVCI 
+                          you are authorized to run
+                          Abaqus/Standard until 31-Dec-2055
+
+                          Your site id is:  
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2020                       * 
+                *                                                         * 
+                *          BUILD ID: 2019_09_13-23.19.31 163176           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2020 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Element, type=C3D10
+  *Nset, nset=ASSEMBLY_COMPOSITE-1__PICKEDSET2
+  *Nset, nset=ASSEMBLY_COMPOSITE-1__PICKEDSET3
+  *Elset, elset=ASSEMBLY_COMPOSITE-1__PICKEDSET2
+  *Elset, elset=ASSEMBLY_COMPOSITE-1__PICKEDSET3
+  *Nset, nset="ASSEMBLY_X negative"
+  *Nset, nset=ASSEMBLY_XPOSITIVE
+  *Nset, nset=ASSEMBLY__PICKEDSET12
+  *Nset, nset=ASSEMBLY__T-MYCOORDINATESYSTEM
+  *Elset, elset="ASSEMBLY_X negative"
+  *Elset, elset=ASSEMBLY_XPOSITIVE
+  *Elset, elset=ASSEMBLY__PICKEDSET12
+  *material, name=FIBRES
+  *elastic, type=ENGINEERINGCONSTANTS
+  *material, name=MATRIX
+  *elastic
+  *orientation, name=ASSEMBLY_COMPOSITE-1_ORI-1
+  *solidsection, elset=ASSEMBLY_COMPOSITE-1__PICKEDSET2, orientation=ASSEMBLY_COMPOSITE-1_ORI-1, material=FIBRES
+  *solidsection, elset=ASSEMBLY_COMPOSITE-1__PICKEDSET3, orientation=ASSEMBLY_COMPOSITE-1_ORI-1, material=MATRIX
+  *solidsection, elset=ASSEMBLY_COMPOSITE-1__PICKEDSET2, orientation=ASSEMBLY_COMPOSITE-1_ORI-1, material=FIBRES
+  *solidsection, elset=ASSEMBLY_COMPOSITE-1__PICKEDSET3, orientation=ASSEMBLY_COMPOSITE-1_ORI-1, material=MATRIX
+  *transform, nset=ASSEMBLY__T-MYCOORDINATESYSTEM
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *boundary
+  *output, field
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  *output, field
+  *output, history, variable=PRESELECT
+  *elementoutput, directions=YES
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 1198 elements are distorted. Either the isoparametric angles are 
+             out of the suggested limits or the triangular or tetrahedral 
+             quality measure is bad. The elements have been identified in 
+             element set WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted tetrahedral elements
+  
+        Element        Quality measure     Min angle        Max angle     Adjusted nodes 
+ --------------------- ---------------- ---------------- ---------------- -------------- 
+       COMPOSITE-1.106         0.137544          8.66271          107.705       NO       
+       COMPOSITE-1.182         0.093318          5.50665          148.609       NO       
+       COMPOSITE-1.258         0.176641          7.77071          114.111       NO       
+       COMPOSITE-1.321         0.200543          9.45616          90.1486       NO       
+       COMPOSITE-1.467         0.187999          9.45492          120.756       NO       
+       COMPOSITE-1.496          0.01677          19.1935          148.358       NO       
+       COMPOSITE-1.612         0.191682          9.90053          116.684       NO       
+       COMPOSITE-1.703         0.172901          9.16711          117.359       NO       
+       COMPOSITE-1.800         0.196754          8.72458          96.5974       NO       
+      COMPOSITE-1.1143         0.200518          9.53281          90.3422       NO       
+      COMPOSITE-1.1618        0.0161812          22.5127          152.847       NO       
+      COMPOSITE-1.1723         0.196778          9.06609          90.9764       NO       
+      COMPOSITE-1.2067          0.18316          9.89633          94.4037       NO       
+      COMPOSITE-1.2076         0.202172          8.89276          91.9254       NO       
+      COMPOSITE-1.2201         0.181417          9.84549          104.326       NO       
+      COMPOSITE-1.2222         0.197781          9.04461          96.9702       NO       
+      COMPOSITE-1.2450         0.201569          9.17874          93.3919       NO       
+      COMPOSITE-1.2498         0.201123          9.41703          97.1105       NO       
+      COMPOSITE-1.2596         0.204169          9.26599          94.4256       NO       
+      COMPOSITE-1.2696         0.200982          9.60306          90.3679       NO       
+      COMPOSITE-1.2707         0.200806          9.46716          97.5593       NO       
+      COMPOSITE-1.2737         0.201632          9.57704          96.8613       NO       
+      COMPOSITE-1.2818         0.196175          8.83508          96.9819       NO       
+      COMPOSITE-1.2847         0.191654          9.38534          99.7611       NO       
+      COMPOSITE-1.2945         0.205155           9.6278          98.0313       NO       
+      COMPOSITE-1.3036         0.191803          9.54082          91.3511       NO       
+      COMPOSITE-1.3099         0.195045          8.86107          91.0071       NO       
+      COMPOSITE-1.3467         0.199373          8.89917          93.2049       NO       
+      COMPOSITE-1.3596         0.180176          9.77698          92.6785       NO       
+      COMPOSITE-1.3611         0.202105          8.96378          94.5804       NO       
+      COMPOSITE-1.3614         0.180234          9.81631          97.7682       NO       
+      COMPOSITE-1.3677         0.206162          9.77521          91.9448       NO       
+      COMPOSITE-1.3718         0.202926          9.11614          96.3536       NO       
+      COMPOSITE-1.3827         0.198175          8.77151          104.009       NO       
+      COMPOSITE-1.3874         0.205249           8.9064          93.1719       NO       
+      COMPOSITE-1.3979         0.126557          5.51103          147.163       NO       
+      COMPOSITE-1.4124         0.175843          8.21434          107.109       NO       
+      COMPOSITE-1.4198         0.178937          9.69172          107.094       NO       
+      COMPOSITE-1.4199         0.188165          8.89229          103.974       NO       
+      COMPOSITE-1.4219         0.192557          9.58113          103.608       NO       
+      COMPOSITE-1.4248         0.175843          9.03689          110.526       NO       
+      COMPOSITE-1.4334         0.156739          9.93169           107.02       NO       
+      COMPOSITE-1.4373         0.190814          8.27193          106.087       NO       
+      COMPOSITE-1.4462         0.155921          9.75812          109.348       NO       
+      COMPOSITE-1.4463          0.20073          8.97847          91.4453       NO       
+      COMPOSITE-1.4534         0.182902          9.50731          103.373       NO       
+      COMPOSITE-1.4668       0.00986932          12.0486          146.881       NO       
+      COMPOSITE-1.4682          0.17076          9.17505          97.1222       NO       
+      COMPOSITE-1.4782         0.192557          8.60223          99.8287       NO       
+      COMPOSITE-1.4908         0.192641           8.4742          96.4533       NO       
+      COMPOSITE-1.4997         0.172901          8.15917           113.39       NO       
+      COMPOSITE-1.5051         0.178937          8.17181          104.096       NO       
+      COMPOSITE-1.5064         0.202328          8.98566          95.7984       NO       
+      COMPOSITE-1.5139         0.194509          8.73515          91.0753       NO       
+      COMPOSITE-1.5153         0.201365          8.82379          93.6256       NO       
+      COMPOSITE-1.5207       0.00349338          8.97389          166.614       NO       
+      COMPOSITE-1.5290         0.196172          8.85261          97.8205       NO       
+      COMPOSITE-1.5321          0.19283          8.86396          98.8077       NO       
+      COMPOSITE-1.5623         0.201315          9.31656          90.1243       NO       
+      COMPOSITE-1.5699         0.199732          9.64216          101.598       NO       
+      COMPOSITE-1.6032         0.204913          9.30492          95.8556       NO       
+      COMPOSITE-1.6133         0.204749          9.35117          97.5905       NO       
+      COMPOSITE-1.6437         0.204994          9.10353            96.35       NO       
+      COMPOSITE-1.6445         0.213384          9.72703           122.89       NO       
+      COMPOSITE-1.6458         0.195647          8.91846           90.099       NO       
+      COMPOSITE-1.6541         0.203656          9.98434          90.2605       NO       
+      COMPOSITE-1.6842         0.192653          8.96437          90.5777       NO       
+      COMPOSITE-1.6884         0.122678          8.20516          112.457       NO       
+      COMPOSITE-1.7450         0.184956           9.7916           91.952       NO       
+      COMPOSITE-1.7575         0.197149          8.75624           107.84       NO       
+      COMPOSITE-1.7800         0.197271          8.92361           96.967       NO       
+      COMPOSITE-1.7859         0.197444          9.00682          97.0308       NO       
+      COMPOSITE-1.7933         0.196209          8.94871          90.9393       NO       
+      COMPOSITE-1.7939          0.20439          8.89122           92.922       NO       
+      COMPOSITE-1.7971         0.204321          9.97233          96.2331       NO       
+      COMPOSITE-1.7999         0.124055          6.62428          103.533       NO       
+      COMPOSITE-1.8035         0.182133          8.74568          106.732       NO       
+      COMPOSITE-1.8043          0.20233          9.00773          105.005       NO       
+      COMPOSITE-1.8192         0.201631          9.22537           97.161       NO       
+      COMPOSITE-1.8204         0.194084          9.06758          106.263       NO       
+      COMPOSITE-1.8212         0.201094          9.27385          90.0696       NO       
+      COMPOSITE-1.8214         0.198029            9.575          97.9876       NO       
+      COMPOSITE-1.8320         0.205354           9.1649          96.3244       NO       
+      COMPOSITE-1.8335         0.196389           8.8612          103.757       NO       
+      COMPOSITE-1.8437         0.205354          9.48749           91.033       NO       
+      COMPOSITE-1.8445         0.205556          9.86509           93.209       NO       
+      COMPOSITE-1.8450         0.196389          9.21531          98.7546       NO       
+      COMPOSITE-1.8571          0.16879          9.83189          95.3119       NO       
+      COMPOSITE-1.8581         0.201955          9.27781          96.9766       NO       
+      COMPOSITE-1.8790         0.176738          8.57777          108.933       NO       
+      COMPOSITE-1.8794         0.203648          9.30011           91.032       NO       
+      COMPOSITE-1.8809         0.200063          8.78695          94.4539       NO       
+      COMPOSITE-1.8812          0.20221          9.13729          92.6398       NO       
+      COMPOSITE-1.8818         0.204492          9.19552          94.8184       NO       
+      COMPOSITE-1.9019         0.220665          9.71298          93.4475       NO       
+      COMPOSITE-1.9056         0.205095          9.45049          91.2005       NO       
+      COMPOSITE-1.9147         0.185152          9.46161          102.419       NO       
+      COMPOSITE-1.9549         0.197478          9.99263          93.3431       NO       
+      COMPOSITE-1.9594          0.13718          7.15235           115.56       NO       
+      COMPOSITE-1.9600         0.185211          9.80375          97.7698       NO       
+      COMPOSITE-1.9676         0.180714          9.83584          91.1071       NO       
+      COMPOSITE-1.9848         0.219573          9.69937          92.9325       NO       
+      COMPOSITE-1.9890         0.180749          9.79249          98.8526       NO       
+     COMPOSITE-1.10010         0.203606          9.63121          99.3135       NO       
+     COMPOSITE-1.10238         0.192138          9.61496          104.175       NO       
+     COMPOSITE-1.10261         0.209142          9.77687          94.2361       NO       
+     COMPOSITE-1.10313         0.200709          9.11593          97.4878       NO       
+     COMPOSITE-1.10676         0.185525          9.93364          98.3509       NO       
+     COMPOSITE-1.10683         0.174534           7.9864          101.206       NO       
+     COMPOSITE-1.10995         0.150626           7.7744           100.73       NO       
+     COMPOSITE-1.11059         0.183371          9.83443          113.835       NO       
+     COMPOSITE-1.11060         0.150247          9.65622          115.318       NO       
+     COMPOSITE-1.11353         0.208963           9.3781          119.663       NO       
+     COMPOSITE-1.11482         0.206638          9.59596          94.8829       NO       
+     COMPOSITE-1.11611        0.0799634          4.54499          152.453       NO       
+     COMPOSITE-1.11778         0.201089          9.12482          93.4187       NO       
+     COMPOSITE-1.11954         0.198992          9.08936          90.0124       NO       
+     COMPOSITE-1.11963         0.208254          9.54304          118.988       NO       
+     COMPOSITE-1.12019         0.202661          9.16028          101.526       NO       
+     COMPOSITE-1.12101         0.203725          9.20963          94.4426       NO       
+     COMPOSITE-1.12237          0.20033          9.17974          90.3061       NO       
+     COMPOSITE-1.12242         0.201413          9.47842          96.6995       NO       
+     COMPOSITE-1.12633          0.18549          9.34737          90.3185       NO       
+     COMPOSITE-1.12738         0.192971          9.97287          91.4976       NO       
+     COMPOSITE-1.12755         0.178896          8.23584          91.1225       NO       
+     COMPOSITE-1.12774         0.200042          8.93159          100.056       NO       
+     COMPOSITE-1.12874         0.202884          9.28737          101.595       NO       
+     COMPOSITE-1.12882         0.204319          9.35601          95.2041       NO       
+     COMPOSITE-1.12884         0.201934          9.13813          93.2589       NO       
+     COMPOSITE-1.12989         0.209142          9.52789          92.1088       NO       
+     COMPOSITE-1.13144         0.201528          9.88495          98.0432       NO       
+     COMPOSITE-1.13244         0.199598           9.0384          97.3328       NO       
+     COMPOSITE-1.13289         0.188315          9.97844          90.2251       NO       
+     COMPOSITE-1.13328           0.2015          9.07258          94.0692       NO       
+     COMPOSITE-1.13391         0.188887           8.5407           90.712       NO       
+     COMPOSITE-1.13402         0.203882          9.62877          96.0398       NO       
+     COMPOSITE-1.13489         0.183639          9.74026          94.4512       NO       
+     COMPOSITE-1.13512         0.201609          9.35875          96.8643       NO       
+     COMPOSITE-1.13574         0.200876          9.38686            90.41       NO       
+     COMPOSITE-1.13643         0.196409          9.09654          101.366       NO       
+     COMPOSITE-1.13692         0.198302          9.01793          96.8357       NO       
+     COMPOSITE-1.13780         0.201364          9.83845          100.425       NO       
+     COMPOSITE-1.13835         0.196477          9.34237          106.277       NO       
+     COMPOSITE-1.13858         0.204761          9.18028          93.7761       NO       
+     COMPOSITE-1.13978         0.201364          9.94088          94.2936       NO       
+     COMPOSITE-1.14123          0.18841          9.88612          98.9029       NO       
+     COMPOSITE-1.14126         0.190663          9.82065          98.5432       NO       
+     COMPOSITE-1.14195         0.190496          9.89709          90.0805       NO       
+     COMPOSITE-1.14254         0.189044          8.43937          98.7163       NO       
+     COMPOSITE-1.14261         0.195462          9.44225          95.5332       NO       
+     COMPOSITE-1.14319         0.204319          9.50641          100.343       NO       
+     COMPOSITE-1.14410         0.186451          8.32329          100.857       NO       
+     COMPOSITE-1.14486          0.19723          9.03657          91.0232       NO       
+     COMPOSITE-1.14496        0.0975497           9.6431          124.547       NO       
+     COMPOSITE-1.14716         0.200598           9.4931          90.7111       NO       
+     COMPOSITE-1.14839          0.19813          9.03832            98.08       NO       
+     COMPOSITE-1.14849         0.197919          9.12169          90.5318       NO       
+     COMPOSITE-1.15042         0.192138          8.61798          110.144       NO       
+     COMPOSITE-1.15062         0.196477          9.91046          100.016       NO       
+     COMPOSITE-1.15234         0.191267          9.26963          101.852       NO       
+     COMPOSITE-1.15506          0.19782          8.95108          96.7778       NO       
+     COMPOSITE-1.15521         0.214348          9.91572          117.673       NO       
+     COMPOSITE-1.15605          0.19518          8.81127          107.623       NO       
+     COMPOSITE-1.15769          0.19666          8.96794          91.1244       NO       
+     COMPOSITE-1.15867         0.192776          8.83532          99.6137       NO       
+     COMPOSITE-1.16011         0.122247          8.32433          126.095       NO       
+     COMPOSITE-1.16870         0.204532          9.41932          94.9296       NO       
+     COMPOSITE-1.17052         0.202059          9.28824          93.0877       NO       
+     COMPOSITE-1.17140         0.117262          6.91191          132.742       NO       
+     COMPOSITE-1.17146         0.185503          9.87196          102.398       NO       
+     COMPOSITE-1.17174         0.198408          8.98594          97.4949       NO       
+     COMPOSITE-1.17175           0.1774          9.99939          95.3461       NO       
+     COMPOSITE-1.17183         0.197819          9.04095          90.0042       NO       
+     COMPOSITE-1.17570         0.204577          9.92555          98.3652       NO       
+     COMPOSITE-1.17666         0.194694          9.91268          93.4968       NO       
+     COMPOSITE-1.17676         0.204384          9.36946          94.6476       NO       
+     COMPOSITE-1.17678         0.204577          9.77347          92.0584       NO       
+     COMPOSITE-1.17685         0.205582          9.26729          99.4408       NO       
+     COMPOSITE-1.17692          0.19676          9.36785          107.042       NO       
+     COMPOSITE-1.17697          0.19518          9.36343          102.188       NO       
+     COMPOSITE-1.17909          0.19676          9.33085          101.691       NO       
+     COMPOSITE-1.17929         0.205582          9.80355          93.5544       NO       
+     COMPOSITE-1.17958         0.202969          9.94777          96.9859       NO       
+     COMPOSITE-1.18052         0.188963          9.71454          109.854       NO       
+     COMPOSITE-1.18213         0.013646          14.6622          145.541       NO       
+     COMPOSITE-1.18291         0.208316          9.71581          90.7998       NO       
+     COMPOSITE-1.18296         0.198971          9.03004          97.3885       NO       
+     COMPOSITE-1.18317         0.197677          8.95898          96.4195       NO       
+     COMPOSITE-1.18441         0.196619          8.64009          99.9734       NO       
+     COMPOSITE-1.18563         0.198331          8.82084          92.9428       NO       
+     COMPOSITE-1.18817         0.201505           8.9629          93.7656       NO       
+     COMPOSITE-1.18823         0.208087          9.37742          90.5291       NO       
+     COMPOSITE-1.18933         0.204846          9.05422          93.7808       NO       
+     COMPOSITE-1.19046         0.208316          9.34184          95.4065       NO       
+     COMPOSITE-1.19055         0.208087          9.66763          95.3069       NO       
+     COMPOSITE-1.19067         0.208559          9.43953          94.0724       NO       
+     COMPOSITE-1.19175         0.204791          9.19946          100.247       NO       
+     COMPOSITE-1.19182         0.204532           9.3855          100.177       NO       
+     COMPOSITE-1.19210         0.192609          9.00356          103.172       NO       
+     COMPOSITE-1.19389         0.179314          8.23542          107.279       NO       
+     COMPOSITE-1.19400         0.207758          9.15064          93.2892       NO       
+     COMPOSITE-1.19646         0.206208          9.43933          92.8966       NO       
+     COMPOSITE-1.19746         0.188963          9.30416          104.402       NO       
+     COMPOSITE-1.19794         0.204791          9.89486          94.1937       NO       
+     COMPOSITE-1.19887         0.206208          9.67934          98.1318       NO       
+     COMPOSITE-1.19911         0.192609          8.91329          107.999       NO       
+     COMPOSITE-1.19980         0.209147          9.87809          92.9579       NO       
+     COMPOSITE-1.20037         0.209147          9.53151          93.6244       NO       
+     COMPOSITE-1.20074         0.177558           9.5209          104.736       NO       
+     COMPOSITE-1.20190         0.192031          8.70422          99.8883       NO       
+     COMPOSITE-1.20438         0.206696          9.85878          96.5431       NO       
+     COMPOSITE-1.20530         0.171425          9.59309          106.468       NO       
+     COMPOSITE-1.20972         0.176659          8.71636          112.511       NO       
+     COMPOSITE-1.21266         0.201979          9.82675          97.6501       NO       
+     COMPOSITE-1.21397         0.189637          8.54833          101.426       NO       
+     COMPOSITE-1.21499         0.200425          9.49985          90.5498       NO       
+     COMPOSITE-1.21713         0.198931          9.32582          90.7766       NO       
+     COMPOSITE-1.22050         0.198973          9.23002          98.2444       NO       
+     COMPOSITE-1.22092         0.196922          8.85102          98.1726       NO       
+     COMPOSITE-1.22127         0.185767          9.86182          98.2222       NO       
+     COMPOSITE-1.22248         0.198455          9.16718          91.2665       NO       
+     COMPOSITE-1.22257         0.202793          9.23827          96.5189       NO       
+     COMPOSITE-1.22271         0.199601          9.16307          96.5605       NO       
+     COMPOSITE-1.22280         0.208658          9.44815          91.3396       NO       
+     COMPOSITE-1.22401         0.202793          9.52223          101.478       NO       
+     COMPOSITE-1.22411         0.208658          9.83888          94.8793       NO       
+     COMPOSITE-1.22479         0.189637           9.4189           105.18       NO       
+     COMPOSITE-1.22519         0.187743          8.52356          102.991       NO       
+     COMPOSITE-1.22521         0.197743          8.81539          96.5635       NO       
+     COMPOSITE-1.22553         0.204058          9.60044          95.5161       NO       
+     COMPOSITE-1.22612         0.172158          8.44482          96.1576       NO       
+     COMPOSITE-1.22683         0.204058          9.24087          101.103       NO       
+     COMPOSITE-1.22779         0.195001          8.50789           92.689       NO       
+     COMPOSITE-1.22848         0.187421          8.42331          100.111       NO       
+     COMPOSITE-1.22897         0.201891          8.95121          95.2206       NO       
+     COMPOSITE-1.22925         0.187145          9.30629          100.933       NO       
+     COMPOSITE-1.22947          0.19796          9.51281          104.691       NO       
+     COMPOSITE-1.23154         0.198412           9.5638          113.886       NO       
+     COMPOSITE-1.23163         0.194932          8.67872          90.3053       NO       
+     COMPOSITE-1.23295         0.206387          9.28892          94.7414       NO       
+     COMPOSITE-1.23299         0.195134          8.92314          96.3917       NO       
+     COMPOSITE-1.23302         0.187394          9.51582          92.0187       NO       
+     COMPOSITE-1.23305         0.104532          8.89841          112.632       NO       
+     COMPOSITE-1.23399         0.195552          8.83307          90.4777       NO       
+     COMPOSITE-1.23417         0.185582          9.88607          91.1743       NO       
+     COMPOSITE-1.23539         0.124574          6.86419          98.7587       NO       
+     COMPOSITE-1.23749         0.198841          9.04888           97.606       NO       
+     COMPOSITE-1.23790         0.166021          7.93814          106.149       NO       
+     COMPOSITE-1.23797         0.196922          9.37357          102.421       NO       
+     COMPOSITE-1.23800         0.205992          9.99911          92.0573       NO       
+     COMPOSITE-1.23887          0.20116          9.47794          96.8426       NO       
+     COMPOSITE-1.23896         0.202018          9.91843           90.845       NO       
+     COMPOSITE-1.23917         0.205992          9.40887          98.4037       NO       
+     COMPOSITE-1.24004          0.19796          8.98828          100.067       NO       
+     COMPOSITE-1.24022         0.197643          9.00351          90.1307       NO       
+     COMPOSITE-1.24046         0.197356          9.56019          101.196       NO       
+     COMPOSITE-1.24147         0.197356          8.94242          106.926       NO       
+     COMPOSITE-1.24291         0.104956          9.64742          94.0282       NO       
+     COMPOSITE-1.24304         0.198143          9.89809          91.3084       NO       
+     COMPOSITE-1.24312         0.197925          9.76163           98.722       NO       
+     COMPOSITE-1.24360         0.122124          8.25464          111.717       NO       
+     COMPOSITE-1.24376         0.187743          9.30037          106.797       NO       
+     COMPOSITE-1.24437         0.201834          9.27596          97.3421       NO       
+     COMPOSITE-1.24493          0.20146          9.33562          90.2901       NO       
+     COMPOSITE-1.24602         0.173358          9.49883          103.293       NO       
+     COMPOSITE-1.24609         0.200758          9.55716          98.4939       NO       
+     COMPOSITE-1.24666         0.206696           9.8856          90.6653       NO       
+     COMPOSITE-1.24668          0.15361          9.75036          110.374       NO       
+     COMPOSITE-1.24674         0.156949          8.37892           121.33       NO       
+     COMPOSITE-1.24675         0.193573          8.90914          92.1842       NO       
+     COMPOSITE-1.24835         0.174966          8.60905          120.716       NO       
+     COMPOSITE-1.24882         0.200758          9.42707          104.104       NO       
+     COMPOSITE-1.24987         0.200911          9.38231          98.6208       NO       
+     COMPOSITE-1.25528         0.205839          9.84198          92.7396       NO       
+     COMPOSITE-1.25947         0.185155           8.3951          98.8132       NO       
+     COMPOSITE-1.26009         0.198174          8.98119           98.897       NO       
+     COMPOSITE-1.26352         0.210722          9.66801          128.372       NO       
+     COMPOSITE-1.26562         0.204024          9.62247          90.8753       NO       
+     COMPOSITE-1.26642         0.187455          9.98929          98.8836       NO       
+     COMPOSITE-1.26692         0.204103          9.16957          97.0058       NO       
+     COMPOSITE-1.26715         0.206977          9.40983          91.6674       NO       
+     COMPOSITE-1.26724         0.193981          8.88269          93.2892       NO       
+     COMPOSITE-1.26766         0.195124          8.93366          107.857       NO       
+     COMPOSITE-1.27015         0.202318          8.79283          90.9032       NO       
+     COMPOSITE-1.27198         0.205569          9.42258          99.5625       NO       
+     COMPOSITE-1.27317         0.205569          9.69913          93.8475       NO       
+     COMPOSITE-1.27327         0.200381           9.8137          100.252       NO       
+     COMPOSITE-1.27331         0.195124          9.25375          102.597       NO       
+     COMPOSITE-1.27468         0.203251          9.98445          96.6185       NO       
+     COMPOSITE-1.27577         0.188555          9.21688          106.851       NO       
+     COMPOSITE-1.27855         0.156493          9.65428          124.634       NO       
+     COMPOSITE-1.27894         0.142117          7.19754          123.281       NO       
+     COMPOSITE-1.27928         0.188555          9.04688          112.301       NO       
+     COMPOSITE-1.27972         0.193595          9.19869          101.214       NO       
+     COMPOSITE-1.27988         0.187855          8.57928          110.561       NO       
+     COMPOSITE-1.28155         0.191866          8.60789          100.497       NO       
+     COMPOSITE-1.28214         0.200035          9.31405          99.0011       NO       
+     COMPOSITE-1.28249         0.184641          8.61954          111.698       NO       
+     COMPOSITE-1.28253         0.201768          9.48892          97.1245       NO       
+     COMPOSITE-1.28311         0.175969           8.4093          101.329       NO       
+     COMPOSITE-1.28325         0.144223          8.24046          116.158       NO       
+     COMPOSITE-1.28659         0.189876          9.14372          102.313       NO       
+     COMPOSITE-1.28711         0.204223           9.6402          98.8311       NO       
+     COMPOSITE-1.28729          0.19217          8.52396          107.571       NO       
+     COMPOSITE-1.28828         0.196162          8.93884          95.4434       NO       
+     COMPOSITE-1.28873         0.184641          8.79474          107.015       NO       
+     COMPOSITE-1.28924         0.201137           8.9719          97.6025       NO       
+     COMPOSITE-1.28948         0.200035          9.16991          104.198       NO       
+     COMPOSITE-1.29107          0.20133           9.9024          102.003       NO       
+     COMPOSITE-1.29119         0.203235          9.58609          90.4976       NO       
+     COMPOSITE-1.29128         0.198999          8.64738          100.143       NO       
+     COMPOSITE-1.29242         0.201508          8.83584          93.4366       NO       
+     COMPOSITE-1.29256         0.103943          9.92196          119.664       NO       
+     COMPOSITE-1.29286         0.201275          9.53325          90.0385       NO       
+     COMPOSITE-1.29329         0.206977          9.70418          96.9305       NO       
+     COMPOSITE-1.29546         0.209101          9.85269          92.2366       NO       
+     COMPOSITE-1.29591          0.20133          9.41937          96.7019       NO       
+     COMPOSITE-1.29653         0.191815          8.85605          100.364       NO       
+     COMPOSITE-1.29662         0.174869          8.65322          100.857       NO       
+     COMPOSITE-1.29762         0.202206          8.72463          96.7639       NO       
+     COMPOSITE-1.29908         0.209101          9.45756          94.2401       NO       
+     COMPOSITE-1.30211         0.192035          8.60376          101.696       NO       
+     COMPOSITE-1.30714         0.158795          9.01035          103.809       NO       
+     COMPOSITE-1.30840         0.187774           9.2402           97.514       NO       
+     COMPOSITE-1.31083         0.198274           9.2117          97.8414       NO       
+     COMPOSITE-1.31147         0.223537          9.68868           93.274       NO       
+     COMPOSITE-1.31489         0.195506          9.40446          102.731       NO       
+     COMPOSITE-1.31644         0.204518          9.23663          99.1572       NO       
+     COMPOSITE-1.31714         0.199809          9.07576          96.8283       NO       
+     COMPOSITE-1.31781         0.189535           8.9034          93.3942       NO       
+     COMPOSITE-1.31950          0.18679          9.78235          101.923       NO       
+     COMPOSITE-1.31973         0.207256          9.87445          95.7466       NO       
+     COMPOSITE-1.31975         0.195732          8.97323           91.582       NO       
+     COMPOSITE-1.31987         0.191538          9.94719          98.6906       NO       
+     COMPOSITE-1.31998         0.197061          8.97099          96.5911       NO       
+     COMPOSITE-1.32302         0.203935           9.6095          91.8433       NO       
+     COMPOSITE-1.32422         0.158575          8.45388          109.142       NO       
+     COMPOSITE-1.32530         0.201423          8.93058          92.5899       NO       
+     COMPOSITE-1.32539         0.202358          9.80647          99.1321       NO       
+     COMPOSITE-1.32551         0.197519          9.02995          100.238       NO       
+     COMPOSITE-1.32585         0.184683          9.32368          95.8264       NO       
+     COMPOSITE-1.32595         0.178799          8.67051          107.315       NO       
+     COMPOSITE-1.32694         0.206566          9.88744           90.002       NO       
+     COMPOSITE-1.32805         0.206566             9.77          97.1537       NO       
+     COMPOSITE-1.32820         0.206021          9.69176          94.4087       NO       
+     COMPOSITE-1.32878         0.179211          9.19048          125.699       NO       
+     COMPOSITE-1.32916         0.193933          9.56818          93.9703       NO       
+     COMPOSITE-1.32930         0.207256           9.8811          91.4419       NO       
+     COMPOSITE-1.32939         0.197519          9.27507          104.952       NO       
+     COMPOSITE-1.33084         0.190849          8.97031          91.7276       NO       
+     COMPOSITE-1.33164         0.202405          9.75657          90.5916       NO       
+     COMPOSITE-1.33325         0.203187          9.07645          100.216       NO       
+     COMPOSITE-1.33365         0.181503           8.6879          97.2824       NO       
+     COMPOSITE-1.33368         0.154679          9.13266          117.386       NO       
+     COMPOSITE-1.33606         0.213757          9.89903          99.0412       NO       
+     COMPOSITE-1.33827         0.188174          8.67809          110.504       NO       
+     COMPOSITE-1.33829         0.192773          9.26542            101.9       NO       
+     COMPOSITE-1.33844         0.198843          9.09952           90.748       NO       
+     COMPOSITE-1.33996         0.203304          9.15408          100.423       NO       
+     COMPOSITE-1.34096         0.186363          9.93862          97.8159       NO       
+     COMPOSITE-1.34142         0.205512          9.65689          95.2594       NO       
+     COMPOSITE-1.34253         0.201505          9.96828          91.9997       NO       
+     COMPOSITE-1.34330         0.206931          9.38613          99.4275       NO       
+     COMPOSITE-1.34331         0.203566          9.32483          100.864       NO       
+     COMPOSITE-1.34371         0.203388          9.71607           98.129       NO       
+     COMPOSITE-1.34443         0.197908          9.27948          90.2216       NO       
+     COMPOSITE-1.34495         0.201562          9.70603          90.0153       NO       
+     COMPOSITE-1.34509         0.202046           9.6667          97.0008       NO       
+     COMPOSITE-1.34546         0.165407          9.84834          91.3078       NO       
+     COMPOSITE-1.34562         0.204001          9.85389          91.6404       NO       
+     COMPOSITE-1.34581         0.202533          9.68276          97.4215       NO       
+     COMPOSITE-1.34586         0.204785          9.76855           100.07       NO       
+     COMPOSITE-1.34764         0.203748          9.59361          93.0484       NO       
+     COMPOSITE-1.34826         0.165008          9.76915          100.379       NO       
+     COMPOSITE-1.35068         0.194675          8.75073          103.014       NO       
+     COMPOSITE-1.35074         0.202439           9.8787          97.8267       NO       
+     COMPOSITE-1.35125         0.196799          9.05217          106.807       NO       
+     COMPOSITE-1.35135        0.0150441          15.7418          123.003       NO       
+     COMPOSITE-1.36242         0.014744          14.2932          154.654       NO       
+     COMPOSITE-1.36419       0.00918085          19.0694          152.179       NO       
+     COMPOSITE-1.36442       0.00917977           15.335            156.9       NO       
+     COMPOSITE-1.36445       0.00603566          26.0001           126.96       NO       
+     COMPOSITE-1.36452       0.00181156          12.7181          157.024       NO       
+     COMPOSITE-1.36536       0.00318595          19.1559          161.303       NO       
+     COMPOSITE-1.36609         0.205236          9.28487          98.1114       NO       
+     COMPOSITE-1.36624          0.14002          9.48557          118.003       NO       
+     COMPOSITE-1.36756         0.194792          8.88598          111.738       NO       
+     COMPOSITE-1.37044         0.181664          9.86463          105.275       NO       
+     COMPOSITE-1.37325         0.183873          9.72682            106.6       NO       
+     COMPOSITE-1.37472         0.199965           9.8698          98.7105       NO       
+     COMPOSITE-1.37475         0.206474          9.39586          97.0702       NO       
+     COMPOSITE-1.37579         0.203819          9.25923          100.338       NO       
+     COMPOSITE-1.37589         0.206833          9.51245          94.0213       NO       
+     COMPOSITE-1.37659         0.196799          9.98766          100.406       NO       
+     COMPOSITE-1.37826          0.20271          9.99242          91.1964       NO       
+     COMPOSITE-1.37932       0.00823188          14.7941          116.177       NO       
+     COMPOSITE-1.37955         0.204721          9.33447          95.0295       NO       
+     COMPOSITE-1.37982         0.197532          8.98727          90.9991       NO       
+     COMPOSITE-1.38152        0.0129929          16.0117           136.81       NO       
+     COMPOSITE-1.38184         0.198655          8.96849           96.749       NO       
+     COMPOSITE-1.38195         0.217038          9.55836           114.93       NO       
+     COMPOSITE-1.38278       0.00120151           8.7263          157.102       NO       
+     COMPOSITE-1.38314         0.201132          9.03518          102.026       NO       
+     COMPOSITE-1.38318         0.179278          8.16155          122.159       NO       
+     COMPOSITE-1.38328         0.194863          8.83357          91.8816       NO       
+     COMPOSITE-1.38338          0.19866          9.41372          98.1436       NO       
+     COMPOSITE-1.38408         0.202918          9.56044          98.4205       NO       
+     COMPOSITE-1.38413         0.196185          8.96893          91.4341       NO       
+     COMPOSITE-1.38448         0.196892          9.00827          90.7972       NO       
+     COMPOSITE-1.38449         0.208494          9.98625          106.371       NO       
+     COMPOSITE-1.38590          0.16494          7.95496          116.945       NO       
+     COMPOSITE-1.38594       0.00922162          9.34833           128.49       NO       
+     COMPOSITE-1.38597       0.00318595          9.34832           153.48       NO       
+     COMPOSITE-1.38710         0.214297          9.59041           115.13       NO       
+     COMPOSITE-1.38758         0.196898           8.9948          97.2202       NO       
+     COMPOSITE-1.38778         0.197616          8.87342          95.3507       NO       
+     COMPOSITE-1.38813         0.179309          8.84901          107.035       NO       
+     COMPOSITE-1.38863         0.196909          8.85888          97.0974       NO       
+     COMPOSITE-1.38918         0.197472          8.96223          96.6248       NO       
+     COMPOSITE-1.38925          0.19755          9.06429          95.2901       NO       
+     COMPOSITE-1.39029         0.188417          8.58482          104.003       NO       
+     COMPOSITE-1.39063         0.209764          9.09418          109.347       NO       
+     COMPOSITE-1.39161         0.195967          9.70224          108.403       NO       
+     COMPOSITE-1.39185         0.197861          8.97997          97.0305       NO       
+     COMPOSITE-1.39189         0.197825          9.10266          90.3525       NO       
+     COMPOSITE-1.39304         0.145735          9.50575          118.933       NO       
+     COMPOSITE-1.39315         0.171252          7.89615          125.318       NO       
+     COMPOSITE-1.39536         0.206913          9.14558          96.6906       NO       
+     COMPOSITE-1.39541         0.207514          9.22755          91.2568       NO       
+     COMPOSITE-1.39653          0.18467          9.90536          98.6421       NO       
+     COMPOSITE-1.39659         0.184566          9.95577          90.7032       NO       
+     COMPOSITE-1.39754         0.198551          9.06053          97.2915       NO       
+     COMPOSITE-1.39881       0.00347772          33.6915          154.995       NO       
+     COMPOSITE-1.39926         0.199965          8.99704          104.856       NO       
+     COMPOSITE-1.39950         0.197805          9.90391          100.122       NO       
+     COMPOSITE-1.39959       0.00318596          19.1559          161.303       NO       
+     COMPOSITE-1.39980         0.195918          8.89258          90.7249       NO       
+     COMPOSITE-1.40114         0.196483          8.83854          96.3013       NO       
+     COMPOSITE-1.40660         0.143964           9.7957          136.921       NO       
+     COMPOSITE-1.42165         0.202574          9.41134          94.9782       NO       
+     COMPOSITE-1.42205         0.184858          8.77537          125.959       NO       
+     COMPOSITE-1.42340          0.20607          9.57808          93.1489       NO       
+     COMPOSITE-1.42511         0.201417          9.44405          96.7441       NO       
+     COMPOSITE-1.42680         0.201458          9.48127           96.691       NO       
+     COMPOSITE-1.42741         0.198343          8.87499          98.4721       NO       
+     COMPOSITE-1.42800         0.200618          9.46201          90.6458       NO       
+     COMPOSITE-1.42974         0.200639          9.49555          90.7132       NO       
+     COMPOSITE-1.43224         0.201416          9.46993          97.4979       NO       
+     COMPOSITE-1.43489         0.199888          9.38723          90.6994       NO       
+     COMPOSITE-1.43589         0.200711          9.36806          96.8212       NO       
+     COMPOSITE-1.43672         0.195579          8.95465          91.6363       NO       
+     COMPOSITE-1.43725         0.196946          8.95374          96.5526       NO       
+     COMPOSITE-1.43820         0.196158          9.01218          91.0493       NO       
+     COMPOSITE-1.44097         0.198148          8.96951          94.4915       NO       
+     COMPOSITE-1.44102         0.198303          8.80853          97.4901       NO       
+     COMPOSITE-1.44361         0.200645          9.53001          97.4366       NO       
+     COMPOSITE-1.44371         0.200282          9.58686          90.1945       NO       
+     COMPOSITE-1.44546         0.202066          9.81994          90.2594       NO       
+     COMPOSITE-1.44673         0.193104          8.52031          104.672       NO       
+     COMPOSITE-1.44691         0.173829          9.50557           120.62       NO       
+     COMPOSITE-1.44693         0.201705          9.94145          90.5134       NO       
+     COMPOSITE-1.44732         0.181659          9.01132          116.533       NO       
+     COMPOSITE-1.44849         0.202387          9.93287          96.4711       NO       
+     COMPOSITE-1.44990         0.197406          8.86396          96.5548       NO       
+     COMPOSITE-1.45057         0.198083          8.90694          98.2924       NO       
+     COMPOSITE-1.45105         0.201832          9.84124          90.1945       NO       
+     COMPOSITE-1.45196         0.196178          8.84917          97.9954       NO       
+     COMPOSITE-1.45233         0.201146          9.53603          90.3839       NO       
+     COMPOSITE-1.45270         0.191302          9.96694          114.516       NO       
+     COMPOSITE-1.45368         0.202396          9.81541           96.734       NO       
+     COMPOSITE-1.45486         0.202395          9.76778          97.1075       NO       
+     COMPOSITE-1.45509         0.195862          9.43643          126.349       NO       
+     COMPOSITE-1.45630         0.197213          8.99134          96.9649       NO       
+     COMPOSITE-1.45650         0.185834          9.99122          116.218       NO       
+     COMPOSITE-1.45714         0.163777          9.60741          107.131       NO       
+     COMPOSITE-1.45918         0.192402          8.51162          102.243       NO       
+     COMPOSITE-1.45923         0.148313          7.45937          125.372       NO       
+     COMPOSITE-1.46034         0.150092          8.78046          119.207       NO       
+     COMPOSITE-1.46134         0.151307          9.13751          102.334       NO       
+     COMPOSITE-1.46157         0.177394          9.75461          96.1123       NO       
+     COMPOSITE-1.47111        0.0156505          19.7025          140.843       NO       
+     COMPOSITE-1.47400         0.150181          8.90939          103.667       NO       
+     COMPOSITE-1.47509         0.197927          8.99525          97.5877       NO       
+     COMPOSITE-1.47597         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.47702          0.14497          8.50781          120.234       NO       
+     COMPOSITE-1.47708         0.191282          9.54138          87.7446       NO       
+     COMPOSITE-1.47747         0.194986          8.96401          94.7606       NO       
+     COMPOSITE-1.47840         0.120502          9.48831          110.092       NO       
+     COMPOSITE-1.48207         0.151894          9.04492          117.872       NO       
+     COMPOSITE-1.48880         0.203107          9.60073           96.469       NO       
+     COMPOSITE-1.48905         0.115224          8.87027          123.683       NO       
+     COMPOSITE-1.48989         0.116994          7.65396          104.464       NO       
+     COMPOSITE-1.49026         0.115224          6.21897          129.917       NO       
+     COMPOSITE-1.49059         0.120042          6.71573          99.2495       NO       
+     COMPOSITE-1.49074         0.191558          9.68341          103.843       NO       
+     COMPOSITE-1.49075         0.106029          7.79146          132.079       NO       
+     COMPOSITE-1.49084          0.14577          9.64397          90.6186       NO       
+     COMPOSITE-1.49095          0.22214          9.99978          115.631       NO       
+     COMPOSITE-1.49479         0.149327          9.58435          116.063       NO       
+     COMPOSITE-1.49500         0.107064          6.81676          128.809       NO       
+     COMPOSITE-1.49527         0.131985          8.97557          121.233       NO       
+     COMPOSITE-1.49645         0.199311          9.12938          97.2691       NO       
+     COMPOSITE-1.49685         0.160175          9.68126          109.157       NO       
+     COMPOSITE-1.49795         0.198051          9.33161          95.4524       NO       
+     COMPOSITE-1.49850         0.187283          9.62156          96.2306       NO       
+     COMPOSITE-1.49861         0.146445          8.72603          125.035       NO       
+     COMPOSITE-1.49900          0.15181          8.16702          117.221       NO       
+     COMPOSITE-1.50017         0.198493          9.01516          96.4885       NO       
+     COMPOSITE-1.50051         0.117094          9.36265          99.3932       NO       
+     COMPOSITE-1.50075         0.202349          9.91506          90.5752       NO       
+     COMPOSITE-1.50149         0.198667           9.3765          94.1867       NO       
+     COMPOSITE-1.50167         0.175439          8.63262          97.4492       NO       
+     COMPOSITE-1.50186         0.204183          9.25196          99.6361       NO       
+     COMPOSITE-1.50216         0.144757          8.09343           121.04       NO       
+     COMPOSITE-1.50219         0.056468           6.1916          96.3977       NO       
+     COMPOSITE-1.50241        0.0987435          7.39351          110.632       NO       
+     COMPOSITE-1.50361         0.108644           9.0233          108.433       NO       
+     COMPOSITE-1.50407         0.150051          9.46267          116.224       NO       
+     COMPOSITE-1.50622         0.163139            8.273          113.326       NO       
+     COMPOSITE-1.50653         0.199262          8.70388          100.164       NO       
+     COMPOSITE-1.50717         0.204881          9.75475          97.8271       NO       
+     COMPOSITE-1.50774         0.192837           8.8386          109.643       NO       
+     COMPOSITE-1.50780         0.196124          8.95704          97.5025       NO       
+     COMPOSITE-1.50906         0.140069          9.17466          93.4372       NO       
+     COMPOSITE-1.50956         0.113097          6.40244           127.41       NO       
+     COMPOSITE-1.51291         0.172016           9.4376          116.556       NO       
+     COMPOSITE-1.51293         0.135402          7.99266          103.176       NO       
+     COMPOSITE-1.51617        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.51804         0.138176          7.84707          104.464       NO       
+     COMPOSITE-1.51884         0.144045          8.51968          107.057       NO       
+     COMPOSITE-1.51913        0.0763027          7.95904           114.48       NO       
+     COMPOSITE-1.51983         0.191725          8.95957          97.1956       NO       
+     COMPOSITE-1.51985         0.196239           9.1117          96.2001       NO       
+     COMPOSITE-1.52010          0.13735          7.92995          123.683       NO       
+     COMPOSITE-1.52075         0.128796          6.49836          129.165       NO       
+     COMPOSITE-1.52087         0.106626          7.34668          126.885       NO       
+     COMPOSITE-1.52248        0.0770427          6.27632          97.3147       NO       
+     COMPOSITE-1.52249       0.00567472          16.0396             150.       NO       
+     COMPOSITE-1.52378         0.194246          8.91086          96.2363       NO       
+     COMPOSITE-1.52511         0.133153          8.82974           121.64       NO       
+     COMPOSITE-1.52533         0.198711          9.26766            97.85       NO       
+     COMPOSITE-1.52534        0.0753069          8.02211          133.437       NO       
+     COMPOSITE-1.52614         0.201739          9.10075          92.8896       NO       
+     COMPOSITE-1.52653         0.154167          8.89112          109.285       NO       
+     COMPOSITE-1.52798          0.13457          7.72105          101.981       NO       
+     COMPOSITE-1.53132         0.184252          9.91765          98.4418       NO       
+     COMPOSITE-1.53267         0.163741          8.71635          113.466       NO       
+     COMPOSITE-1.53323        0.0740635          8.83567          120.127       NO       
+     COMPOSITE-1.53454         0.180361          8.34095          109.334       NO       
+     COMPOSITE-1.53498         0.128914          9.27349          105.704       NO       
+     COMPOSITE-1.53687         0.200657          9.95444          95.7849       NO       
+     COMPOSITE-1.53738         0.197411          8.94448          96.5782       NO       
+     COMPOSITE-1.53929         0.203927          9.11629           100.92       NO       
+     COMPOSITE-1.53958         0.120373          9.64028          105.952       NO       
+     COMPOSITE-1.53981         0.202654          9.91124          98.0193       NO       
+     COMPOSITE-1.54129         0.140069          9.17466          93.4372       NO       
+     COMPOSITE-1.54252         0.195317          9.48607          104.203       NO       
+     COMPOSITE-1.54258         0.143863          7.23955          127.143       NO       
+     COMPOSITE-1.54259         0.206721          9.05998           91.764       NO       
+     COMPOSITE-1.54343         0.112279           8.7887          120.512       NO       
+     COMPOSITE-1.54413         0.152188          7.75229           102.66       NO       
+     COMPOSITE-1.54439         0.194648          8.79146          97.2234       NO       
+     COMPOSITE-1.54810         0.201643          8.92278          102.878       NO       
+     COMPOSITE-1.54891         0.201643          9.99981          96.5909       NO       
+     COMPOSITE-1.54916         0.150958          7.82058          121.317       NO       
+     COMPOSITE-1.55041         0.198977          9.06223          97.2872       NO       
+     COMPOSITE-1.55057        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.55517         0.185298          9.36827          89.0953       NO       
+     COMPOSITE-1.55518         0.199341          9.57951          98.0827       NO       
+     COMPOSITE-1.55541         0.146054          8.20342          107.727       NO       
+     COMPOSITE-1.55564         0.149861          9.05458          94.6649       NO       
+     COMPOSITE-1.55581        0.0987425          9.96448          110.632       NO       
+     COMPOSITE-1.55583        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.55588         0.202888          9.05144          98.7767       NO       
+     COMPOSITE-1.55605        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.55630          0.17899           8.7352          97.9546       NO       
+     COMPOSITE-1.55646         0.134159          6.71573          97.0145       NO       
+     COMPOSITE-1.55717         0.078865          6.73873          104.377       NO       
+     COMPOSITE-1.55725         0.201637          9.12065          98.7286       NO       
+     COMPOSITE-1.55735        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.55742         0.201433          9.51951          98.5855       NO       
+     COMPOSITE-1.55756         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.55758         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.55802         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.55824         0.135279          6.87828          123.471       NO       
+     COMPOSITE-1.55825         0.140255           7.5184          123.683       NO       
+     COMPOSITE-1.55828         0.191508          8.38585          93.3257       NO       
+     COMPOSITE-1.55872         0.121345          9.83337          96.7638       NO       
+     COMPOSITE-1.55911        0.0755953          7.95904          112.632       NO       
+     COMPOSITE-1.56004         0.132931          11.4657          161.534       NO       
+     COMPOSITE-1.56029         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.56045         0.170927          8.06417          94.4961       NO       
+     COMPOSITE-1.56060         0.185102          8.20553          100.869       NO       
+     COMPOSITE-1.56063         0.134197           7.8316          97.1865       NO       
+     COMPOSITE-1.56076          0.13735          6.85725          128.397       NO       
+     COMPOSITE-1.56120        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.56187         0.184845          9.19384          100.241       NO       
+     COMPOSITE-1.56203         0.131424          7.09419          125.136       NO       
+     COMPOSITE-1.56274         0.192402          9.47828          100.414       NO       
+     COMPOSITE-1.56276         0.192402          9.52071          96.7586       NO       
+     COMPOSITE-1.56386         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.56492        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.56517         0.195825          8.85644          91.6724       NO       
+     COMPOSITE-1.56527         0.197884          9.28587          103.183       NO       
+     COMPOSITE-1.56547         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.56586         0.101037          9.20286          114.395       NO       
+     COMPOSITE-1.56630         0.098743          6.99594          117.521       NO       
+     COMPOSITE-1.56713         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.56829         0.151159          8.57654          119.856       NO       
+     COMPOSITE-1.56952        0.0979893          9.61317          124.303       NO       
+     COMPOSITE-1.56959         0.138176          8.87766          106.383       NO       
+     COMPOSITE-1.56971        0.0110469          30.6476           152.31       NO       
+     COMPOSITE-1.56978         0.149487          7.46849          125.052       NO       
+     COMPOSITE-1.56988        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.56998        0.0987435          7.39351          110.632       NO       
+     COMPOSITE-1.57016         0.121566          9.69472           131.17       NO       
+     COMPOSITE-1.57043         0.193244          9.99185          93.4906       NO       
+     COMPOSITE-1.57044         0.126437           7.9278          101.035       NO       
+     COMPOSITE-1.57050         0.187734          9.51581          101.447       NO       
+     COMPOSITE-1.57067         0.116994          9.55755          104.464       NO       
+     COMPOSITE-1.57092           0.1442          7.88462          123.261       NO       
+     COMPOSITE-1.57130         0.193198          9.67667          101.123       NO       
+     COMPOSITE-1.57133           0.1204          8.91224          105.433       NO       
+     COMPOSITE-1.57148         0.157699          7.92964          94.1752       NO       
+     COMPOSITE-1.57227        0.0987426          7.39345          110.632       NO       
+     COMPOSITE-1.57228        0.0987426          7.11336          104.973       NO       
+     COMPOSITE-1.57234         0.193198          8.48111          107.046       NO       
+     COMPOSITE-1.57277        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.57284         0.132763          9.53222          106.296       NO       
+     COMPOSITE-1.57324         0.120819          6.94638          119.391       NO       
+     COMPOSITE-1.57366         0.161655          7.96244          95.5727       NO       
+     COMPOSITE-1.57390        0.0621719           8.4863          98.5304       NO       
+     COMPOSITE-1.57448         0.104156          8.46755          116.264       NO       
+     COMPOSITE-1.57449         0.196357          9.24526           94.351       NO       
+     COMPOSITE-1.57453         0.196255          8.73814          99.6577       NO       
+     COMPOSITE-1.57454        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.57470         0.128917          7.87949          125.454       NO       
+     COMPOSITE-1.57495         0.117808          7.05569          117.174       NO       
+     COMPOSITE-1.57504        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.57590        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.57691         0.200984            9.403          97.5913       NO       
+     COMPOSITE-1.57751        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.57752        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.57755          0.17304           8.9133          113.907       NO       
+     COMPOSITE-1.57789         0.198952          8.86582          104.775       NO       
+     COMPOSITE-1.57793          0.19859           8.9839          97.0585       NO       
+     COMPOSITE-1.57868         0.144231          8.46768           109.27       NO       
+     COMPOSITE-1.57893         0.198712           9.0994          105.991       NO       
+     COMPOSITE-1.57896          0.20576          9.29197          93.7841       NO       
+     COMPOSITE-1.57898         0.188854          8.36439          109.744       NO       
+     COMPOSITE-1.57942         0.128796          8.34469          125.993       NO       
+     COMPOSITE-1.57993         0.198712          9.72783           100.03       NO       
+     COMPOSITE-1.57999         0.207523          9.62798          94.7903       NO       
+     COMPOSITE-1.58019           0.1998          9.15635          96.4713       NO       
+     COMPOSITE-1.58043        0.0882406          6.46513          136.371       NO       
+     COMPOSITE-1.58059        0.0763027          7.95904           114.48       NO       
+     COMPOSITE-1.58073         0.198124          9.31733          105.935       NO       
+     COMPOSITE-1.58076         0.200657          9.66782          101.976       NO       
+     COMPOSITE-1.58147         0.199443          9.16403          96.9582       NO       
+     COMPOSITE-1.58164         0.127041          6.71573          98.5991       NO       
+     COMPOSITE-1.58201         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.58220         0.170162          8.55918          114.431       NO       
+     COMPOSITE-1.58228         0.197491          9.59465          101.171       NO       
+     COMPOSITE-1.58245         0.184325          8.58847          101.185       NO       
+     COMPOSITE-1.58268         0.194278          9.69003          101.595       NO       
+     COMPOSITE-1.58270         0.194278          9.46624          107.562       NO       
+     COMPOSITE-1.58333        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.58336        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.58342          0.19599          9.08648          95.4825       NO       
+     COMPOSITE-1.58353         0.197491          9.01313          106.957       NO       
+     COMPOSITE-1.58468         0.192152           8.9106          93.5326       NO       
+     COMPOSITE-1.58502        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.58509         0.199341          9.76379          103.716       NO       
+     COMPOSITE-1.58571         0.202725           9.1573          91.3617       NO       
+     COMPOSITE-1.58640         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.58642         0.157699          7.92965          94.1752       NO       
+     COMPOSITE-1.58675        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.58682         0.175491          8.11351          91.4536       NO       
+     COMPOSITE-1.58802        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.58803        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.58810         0.150006           9.5023           104.14       NO       
+     COMPOSITE-1.58811         0.201231          9.05356           102.73       NO       
+     COMPOSITE-1.58816          0.19395          9.27902          103.756       NO       
+     COMPOSITE-1.58842        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.58853        0.0987425          6.99592          117.521       NO       
+     COMPOSITE-1.58920        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.58925        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.58931         0.195998          9.40973          101.957       NO       
+     COMPOSITE-1.58966         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.58996         0.202918          9.73927          99.6403       NO       
+     COMPOSITE-1.59026          0.19395          8.97452          109.126       NO       
+     COMPOSITE-1.59030        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.59033        0.0987426          7.39345          110.632       NO       
+     COMPOSITE-1.59040        0.0987426          7.11336          104.973       NO       
+     COMPOSITE-1.59047         0.205451          9.04855          90.3017       NO       
+     COMPOSITE-1.59054          0.17316          9.04108           105.38       NO       
+     COMPOSITE-1.59087        0.0987425          7.39345          110.632       NO       
+     COMPOSITE-1.59214         0.148877          7.75734          122.394       NO       
+     COMPOSITE-1.59246         0.173946          9.47073          91.3786       NO       
+     COMPOSITE-1.59292         0.194757          9.27802          92.0621       NO       
+     COMPOSITE-1.59309        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.59330         0.156571          8.93075          110.524       NO       
+     COMPOSITE-1.59416         0.193764          8.56227           90.163       NO       
+     COMPOSITE-1.59509         0.114437          6.63659          126.575       NO       
+     COMPOSITE-1.59619         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.59636         0.203111          9.47511          98.1943       NO       
+     COMPOSITE-1.59797         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.59829        0.0987425          6.99592          117.521       NO       
+     COMPOSITE-1.59872        0.0064049          25.5013          157.273       NO       
+     COMPOSITE-1.59900        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.60019         0.146054          8.25487          104.464       NO       
+     COMPOSITE-1.60045          0.19576          9.04726          96.1106       NO       
+     COMPOSITE-1.60120          0.19927          8.84134          104.711       NO       
+     COMPOSITE-1.60193         0.202918          9.99228          93.3646       NO       
+     COMPOSITE-1.60214         0.200976           9.0529          91.7548       NO       
+     COMPOSITE-1.60286         0.144045           7.9327          108.391       NO       
+     COMPOSITE-1.60314         0.134159          6.71573          97.0145       NO       
+     COMPOSITE-1.60323        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.60468        0.0987425          6.99592          117.521       NO       
+     COMPOSITE-1.60475        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.60557        0.0755953          7.95904          112.632       NO       
+     COMPOSITE-1.60569          0.13735          7.16221          123.683       NO       
+     COMPOSITE-1.60578         0.119008          7.04583          133.302       NO       
+     COMPOSITE-1.60579        0.0987425          9.96448          110.632       NO       
+     COMPOSITE-1.60587         0.140255          7.28923          127.613       NO       
+     COMPOSITE-1.60626         0.145856          9.10791           107.96       NO       
+     COMPOSITE-1.60816         0.203339          9.16344          90.6833       NO       
+     COMPOSITE-1.60915         0.197193          8.99766          106.494       NO       
+     COMPOSITE-1.60928          0.17814          8.61765          112.287       NO       
+     COMPOSITE-1.61026         0.188801          8.31057          108.555       NO       
+     COMPOSITE-1.61027         0.125082          8.48601          114.433       NO       
+     COMPOSITE-1.61077         0.189873          9.36827          88.9232       NO       
+     COMPOSITE-1.61106         0.136018          7.89406          90.0703       NO       
+     COMPOSITE-1.61110         0.197642          8.93613          96.7904       NO       
+     COMPOSITE-1.61159         0.203432          9.93296          97.5486       NO       
+     COMPOSITE-1.61187         0.115224          8.95513          125.157       NO       
+     COMPOSITE-1.61210        0.0987425          7.11336          104.973       NO       
+     COMPOSITE-1.61294        0.0987425          9.96448          110.632       NO       
+     COMPOSITE-1.61297         0.201683          9.22371          102.473       NO       
+     COMPOSITE-1.61326        0.0987426          7.39345          110.632       NO       
+     COMPOSITE-1.61362         0.150903          8.94803          113.533       NO       
+     COMPOSITE-1.61438        0.0782897          7.95904          117.134       NO       
+     COMPOSITE-1.61464        0.0979893          6.57251          123.683       NO       
+     COMPOSITE-1.61508         0.194503          8.81433          95.5294       NO       
+     COMPOSITE-1.61531         0.179129          9.13006          102.903       NO       
+     COMPOSITE-1.61550         0.179271          9.38152          90.7934       NO       
+     COMPOSITE-1.61627         0.136014          9.78106          102.495       NO       
+     COMPOSITE-1.61631        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.61632         0.150608          9.33053          116.863       NO       
+     COMPOSITE-1.61635         0.136903          9.72635          97.5723       NO       
+     COMPOSITE-1.61650         0.183939          9.36211          98.6333       NO       
+     COMPOSITE-1.61665         0.171894          8.59467          121.615       NO       
+     COMPOSITE-1.61699        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.61767        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.61768        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.61774         0.149804           7.3478          120.392       NO       
+     COMPOSITE-1.61811        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.61884          0.16315          7.95329          96.1855       NO       
+     COMPOSITE-1.61886         0.105319          7.95159          96.3599       NO       
+     COMPOSITE-1.61931         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.61952        0.0427329          6.12146          123.797       NO       
+     COMPOSITE-1.61961        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.61965         0.128914          9.18365          104.464       NO       
+     COMPOSITE-1.61971         0.198053          8.89881          98.4205       NO       
+     COMPOSITE-1.61974        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.62005         0.194302           9.7349          102.526       NO       
+     COMPOSITE-1.62112         0.181566          9.61253          106.263       NO       
+     COMPOSITE-1.62123         0.153862           7.9731          121.399       NO       
+     COMPOSITE-1.62177         0.147501          7.55514          125.401       NO       
+     COMPOSITE-1.62199         0.173117          9.33669          95.9591       NO       
+     COMPOSITE-1.62305        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.62314         0.100845          6.14203          135.267       NO       
+     COMPOSITE-1.62393         0.198784          9.15642          97.5581       NO       
+     COMPOSITE-1.62395          0.01281          14.5755           139.78       NO       
+     COMPOSITE-1.62398          0.01281          15.7424          142.065       NO       
+     COMPOSITE-1.62402         0.200572          9.52567          97.1506       NO       
+     COMPOSITE-1.62408         0.200572          9.83999          102.657       NO       
+     COMPOSITE-1.62482         0.197795          8.99173          96.4195       NO       
+     COMPOSITE-1.62506         0.182806          8.79263          104.212       NO       
+     COMPOSITE-1.62510        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.62523         0.157699          7.93699          93.3921       NO       
+     COMPOSITE-1.62575         0.206707           9.4056          92.7531       NO       
+     COMPOSITE-1.62579         0.193401          8.87995          96.4565       NO       
+     COMPOSITE-1.62585         0.111089          7.50844          132.205       NO       
+     COMPOSITE-1.62654         0.120042          6.71573          99.2495       NO       
+     COMPOSITE-1.62686        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.62691         0.193138          8.84587          96.2507       NO       
+     COMPOSITE-1.62719          0.20275          9.40881          100.627       NO       
+     COMPOSITE-1.62759         0.200562          9.58544          92.3295       NO       
+     COMPOSITE-1.62789        0.0987435          7.39351          110.632       NO       
+     COMPOSITE-1.62793         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.62871        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.62876         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.62902        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.62909         0.209188          9.80048          93.9344       NO       
+     COMPOSITE-1.62913        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.62989        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.63027         0.150496          9.42315          115.503       NO       
+     COMPOSITE-1.63029        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.63076         0.170927          7.93133          101.768       NO       
+     COMPOSITE-1.63118         0.148091          7.38234          125.686       NO       
+     COMPOSITE-1.63120         0.194007          8.84257          96.6557       NO       
+     COMPOSITE-1.63134         0.198802          8.96457          96.0905       NO       
+     COMPOSITE-1.63141         0.189873          9.36827          88.9232       NO       
+     COMPOSITE-1.63142         0.131777          6.71573          97.8567       NO       
+     COMPOSITE-1.63191         0.180877          9.17466          92.6066       NO       
+     COMPOSITE-1.63197         0.185298          9.36827          89.0953       NO       
+     COMPOSITE-1.63202         0.176098          9.36827          89.2925       NO       
+     COMPOSITE-1.63221         0.144045          8.02639          104.464       NO       
+     COMPOSITE-1.63227         0.190803          8.73768          96.9507       NO       
+     COMPOSITE-1.63239         0.176827          9.17466          92.8718       NO       
+     COMPOSITE-1.63241         0.120819          9.53678          120.636       NO       
+     COMPOSITE-1.63244         0.153787          7.87959          98.6708       NO       
+     COMPOSITE-1.63253         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.63254         0.185298          9.36827          89.0953       NO       
+     COMPOSITE-1.63255         0.189824          8.34817          94.6225       NO       
+     COMPOSITE-1.63265         0.198282          9.32171          96.7442       NO       
+     COMPOSITE-1.63280         0.148132          7.45823          125.432       NO       
+     COMPOSITE-1.63295         0.138176          7.71109          109.051       NO       
+     COMPOSITE-1.63373         0.145813          9.55181             114.       NO       
+     COMPOSITE-1.63374         0.185102          8.31311          94.4961       NO       
+     COMPOSITE-1.63378         0.156245          9.17466           93.281       NO       
+     COMPOSITE-1.63396         0.203641          9.60041          101.118       NO       
+     COMPOSITE-1.63401          0.19792          9.00266          96.4007       NO       
+     COMPOSITE-1.63410         0.207862          9.78175          95.2877       NO       
+     COMPOSITE-1.63455          0.20151          8.95895          98.7919       NO       
+     COMPOSITE-1.63466         0.204747          9.96826          90.6144       NO       
+     COMPOSITE-1.63553         0.128796           6.8758          123.683       NO       
+     COMPOSITE-1.63554         0.144045          8.52738          104.464       NO       
+     COMPOSITE-1.63569        0.0987435          7.39351          110.632       NO       
+     COMPOSITE-1.63580         0.196788          9.06732          94.4961       NO       
+     COMPOSITE-1.63600         0.180361          9.54683          113.274       NO       
+     COMPOSITE-1.63624        0.0405949          6.12146          119.457       NO       
+     COMPOSITE-1.63651         0.195349          9.16758          99.8437       NO       
+     COMPOSITE-1.63696         0.128796           6.8758          123.683       NO       
+     COMPOSITE-1.63708        0.0763027          7.95904           114.48       NO       
+     COMPOSITE-1.63709          0.16876          9.66697          92.8316       NO       
+     COMPOSITE-1.63724          0.13735          7.78732          126.811       NO       
+     COMPOSITE-1.63777         0.116994          7.42647          110.353       NO       
+     COMPOSITE-1.63795         0.077418          7.95904          115.954       NO       
+     COMPOSITE-1.63852         0.200098          9.56276          99.2963       NO       
+     COMPOSITE-1.63860       0.00874841           8.4621          164.795       NO       
+     COMPOSITE-1.63867        0.0819428          6.87734          135.739       NO       
+     COMPOSITE-1.63868         0.135036          7.87125          94.3351       NO       
+     COMPOSITE-1.63880        0.0413304          6.12146          121.869       NO       
+     COMPOSITE-1.63947         0.175996          9.10925          105.503       NO       
+     COMPOSITE-1.63951         0.167946          9.09086          107.147       NO       
+     COMPOSITE-1.63954         0.198985          9.32614          99.4091       NO       
+     COMPOSITE-1.63996         0.128796          8.38413          123.683       NO       
+     COMPOSITE-1.64005         0.131777          6.71573          97.8567       NO       
+     COMPOSITE-1.64021         0.203346          9.21418           92.661       NO       
+     COMPOSITE-1.64098         0.204166           9.2968          96.9943       NO       
+     COMPOSITE-1.64160         0.128914          7.72163          104.464       NO       
+     COMPOSITE-1.64178         0.156453          7.90083          96.2674       NO       
+     COMPOSITE-1.64179         0.162381          9.36827          89.5129       NO       
+     COMPOSITE-1.64182         0.152188           7.9142          94.4961       NO       
+     COMPOSITE-1.64284         0.176098          9.36827          89.2925       NO       
+     COMPOSITE-1.64288         0.175491          8.07491           95.345       NO       
+     COMPOSITE-1.64290         0.168621          9.17466          93.0945       NO       
+     COMPOSITE-1.64313         0.156319          7.90824          97.5013       NO       
+     COMPOSITE-1.64390         0.193844          9.51706          98.1439       NO       
+     COMPOSITE-1.64492        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.64499         0.189873          9.36827          88.9232       NO       
+     COMPOSITE-1.64502          0.20159          9.17351          91.0768       NO       
+     COMPOSITE-1.64505         0.198631          9.67916          90.9047       NO       
+     COMPOSITE-1.64508         0.180877          9.17466          92.6066       NO       
+     COMPOSITE-1.64511         0.193844          8.65127          94.4961       NO       
+     COMPOSITE-1.64517         0.196788          9.00783          99.0572       NO       
+     COMPOSITE-1.64520         0.198631          8.71197          94.1945       NO       
+     COMPOSITE-1.64597         0.200375          9.74008          92.2384       NO       
+     COMPOSITE-1.64601         0.198631          9.66938          93.0989       NO       
+     COMPOSITE-1.64602         0.172481           9.2078          94.3597       NO       
+     COMPOSITE-1.64610         0.191282          9.54138          87.7446       NO       
+     COMPOSITE-1.64613          0.20159          9.15597          93.6889       NO       
+     COMPOSITE-1.64617         0.193844          8.56741          99.9658       NO       
+     COMPOSITE-1.64620         0.180877          9.17466          92.6066       NO       
+     COMPOSITE-1.64681         0.169388          8.02866          96.7586       NO       
+     COMPOSITE-1.64758         0.189824          8.37951          91.3488       NO       
+     COMPOSITE-1.64759         0.185298          9.36827          89.0953       NO       
+     COMPOSITE-1.64768         0.176827          9.17466          92.8718       NO       
+     COMPOSITE-1.64771         0.185102          8.20553          100.869       NO       
+     COMPOSITE-1.64777         0.193844          9.54965          94.4961       NO       
+     COMPOSITE-1.64797        0.0987435          7.39351          110.632       NO       
+     COMPOSITE-1.64802        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.64887          0.17549           8.1135          91.4536       NO       
+     COMPOSITE-1.64889         0.176098          9.36827          89.2925       NO       
+     COMPOSITE-1.64895         0.168621          9.17466          93.0945       NO       
+     COMPOSITE-1.64896         0.170927          7.93133          101.768       NO       
+     COMPOSITE-1.64937        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.65005         0.162381          9.36827          89.5129       NO       
+     COMPOSITE-1.65007         0.156453           7.9478          91.5414       NO       
+     COMPOSITE-1.65021         0.115224          6.67443          123.683       NO       
+     COMPOSITE-1.65050         0.201683          9.31939          97.3324       NO       
+     COMPOSITE-1.65054         0.195819          9.66184          103.556       NO       
+     COMPOSITE-1.65089         0.156245          9.17466           93.281       NO       
+     COMPOSITE-1.65097         0.134197           7.8887          92.0938       NO       
+     COMPOSITE-1.65129        0.0104386          9.75421          165.563       NO       
+     COMPOSITE-1.65202         0.144703          9.36827          89.7515       NO       
+     COMPOSITE-1.65233         0.130384          7.67308          103.546       NO       
+     COMPOSITE-1.65254         0.195729          8.96074           94.945       NO       
+     COMPOSITE-1.65283          0.19246          12.2153          161.837       NO       
+     COMPOSITE-1.65326         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.65333         0.156453          7.90083          96.2674       NO       
+     COMPOSITE-1.65335         0.144703          9.36827          89.7515       NO       
+     COMPOSITE-1.65339         0.152188           7.9142          94.4961       NO       
+     COMPOSITE-1.65345         0.130384          7.87003          94.4961       NO       
+     COMPOSITE-1.65426        0.0723929          5.72267          134.024       NO       
+     COMPOSITE-1.65438         0.162381          9.36827          89.5129       NO       
+     COMPOSITE-1.65440         0.156245          9.17466           93.281       NO       
+     COMPOSITE-1.65518         0.189824          8.34816          94.6225       NO       
+     COMPOSITE-1.65533          0.17549           8.0749           95.345       NO       
+     COMPOSITE-1.65545         0.168621          9.17466          93.0945       NO       
+     COMPOSITE-1.65549         0.170927          8.06417          94.4961       NO       
+     COMPOSITE-1.65559         0.207079           9.2125          91.6932       NO       
+     COMPOSITE-1.65594        0.0819428          5.84733          134.024       NO       
+     COMPOSITE-1.65666        0.0064049          10.0982          148.803       NO       
+     COMPOSITE-1.65669       0.00874841          12.9662          160.715       NO       
+     COMPOSITE-1.65680        0.0104386          14.4373           157.29       NO       
+     COMPOSITE-1.65681         0.198631          9.67916          90.9047       NO       
+     COMPOSITE-1.65685         0.185102          8.31311          94.4961       NO       
+     COMPOSITE-1.65686         0.176827          9.17466          92.8718       NO       
+     COMPOSITE-1.65687         0.193844          9.51706          98.1439       NO       
+     COMPOSITE-1.65733          0.20139          9.42636           96.722       NO       
+     COMPOSITE-1.65820         0.196788          9.06732          94.4961       NO       
+     COMPOSITE-1.65825          0.20159          9.17351          91.0768       NO       
+     COMPOSITE-1.65842         0.193844          8.65127          94.4961       NO       
+     COMPOSITE-1.65847         0.196788          9.00783          99.0572       NO       
+     COMPOSITE-1.65873         0.192896          8.90916           95.247       NO       
+     COMPOSITE-1.65874         0.098743          9.96452          110.632       NO       
+     COMPOSITE-1.65891         0.198919          9.00421          97.3051       NO       
+     COMPOSITE-1.65951         0.189873          9.36827          88.9232       NO       
+     COMPOSITE-1.65953         0.198631          8.73651          91.2242       NO       
+     COMPOSITE-1.65954          0.20159          9.15597          93.6889       NO       
+     COMPOSITE-1.65959         0.180877          9.17466          92.6066       NO       
+     COMPOSITE-1.65960         0.193844          8.56741          99.9658       NO       
+     COMPOSITE-1.65992         0.174851          8.62299          112.613       NO       
+     COMPOSITE-1.66031         0.200375           8.7628          92.5609       NO       
+     COMPOSITE-1.66033         0.176205           9.2078           93.962       NO       
+     COMPOSITE-1.66047         0.198631          9.66938          93.0989       NO       
+     COMPOSITE-1.66051         0.189824          8.37952          91.3488       NO       
+     COMPOSITE-1.66061         0.193844          9.54965          94.4961       NO       
+     COMPOSITE-1.66062         0.176827          9.17466          92.8718       NO       
+     COMPOSITE-1.66084         0.098743          9.96452          110.632       NO       
+     COMPOSITE-1.66179         0.176098          9.36827          89.2925       NO       
+     COMPOSITE-1.66226         0.198631          8.71197          94.1945       NO       
+     COMPOSITE-1.66491         0.174386          9.83197          98.8492       NO       
+     COMPOSITE-1.66516         0.192679          9.28585          99.2349       NO       
+     COMPOSITE-1.66540         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.66594        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.66626         0.200375           8.7589          93.0216       NO       
+     COMPOSITE-1.66690         0.203641          9.64417          95.4572       NO       
+     COMPOSITE-1.66692        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.66695        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.66697         0.198682          9.57336           105.21       NO       
+     COMPOSITE-1.66709         0.197812          8.97669          97.3447       NO       
+     COMPOSITE-1.66725         0.201209           9.9271           98.391       NO       
+     COMPOSITE-1.66732         0.200494          9.99119          92.1913       NO       
+     COMPOSITE-1.66750         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.66777        0.0987435          6.99598          117.521       NO       
+     COMPOSITE-1.66782         0.200664           9.1652          103.673       NO       
+     COMPOSITE-1.66885         0.109469          8.32782          104.842       NO       
+     COMPOSITE-1.66987         0.205185          9.01299          93.4331       NO       
+     COMPOSITE-1.67077        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.67189         0.192682          8.57356           97.521       NO       
+     COMPOSITE-1.67295         0.195682          8.86041           96.234       NO       
+     COMPOSITE-1.67311         0.098743          6.99595          117.521       NO       
+     COMPOSITE-1.67321         0.193419          9.33367          98.1485       NO       
+     COMPOSITE-1.67420         0.150357           7.4658           124.72       NO       
+     COMPOSITE-1.67429         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.67430         0.193938          8.88441          94.7637       NO       
+     COMPOSITE-1.67434         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.67539        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.67548         0.145124          7.44704          126.228       NO       
+     COMPOSITE-1.67630         0.202041           9.5261           92.479       NO       
+     COMPOSITE-1.67642         0.197396           8.9051          97.7355       NO       
+     COMPOSITE-1.67644         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.67677        0.0987435          7.39351          110.632       NO       
+     COMPOSITE-1.67678        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.67679         0.198411          8.87934          96.8412       NO       
+     COMPOSITE-1.67823         0.194703          9.20679          96.1097       NO       
+     COMPOSITE-1.67825         0.143292          7.57924          126.251       NO       
+     COMPOSITE-1.67843        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.67846         0.198682          9.27042          100.047       NO       
+     COMPOSITE-1.67880         0.191277          9.32475          93.5627       NO       
+     COMPOSITE-1.67881         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.67936         0.138176          8.83867          104.464       NO       
+     COMPOSITE-1.67937         0.193762          8.60035          107.956       NO       
+     COMPOSITE-1.67966         0.168621          9.17466          93.0945       NO       
+     COMPOSITE-1.67974         0.209188          9.51265          92.4261       NO       
+     COMPOSITE-1.67986         0.202842          9.02769          99.1272       NO       
+     COMPOSITE-1.68013         0.131424          7.43456          128.356       NO       
+     COMPOSITE-1.68017          0.17342          8.23168          113.195       NO       
+     COMPOSITE-1.68079         0.194233          8.90877          94.1996       NO       
+     COMPOSITE-1.68085         0.115224          6.67443          123.683       NO       
+     COMPOSITE-1.68146         0.114469          9.45446          118.317       NO       
+     COMPOSITE-1.68147          0.17342          8.74011          117.298       NO       
+     COMPOSITE-1.68198         0.077418          7.95904          115.954       NO       
+     COMPOSITE-1.68230         0.128796          8.34469          125.993       NO       
+     COMPOSITE-1.68255         0.193521          8.88932          96.4703       NO       
+     COMPOSITE-1.68264        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.68284         0.172016          8.06269          112.865       NO       
+     COMPOSITE-1.68385         0.195317          8.76788          100.039       NO       
+     COMPOSITE-1.68386          0.19832            8.991          95.9677       NO       
+     COMPOSITE-1.68433         0.195721          9.62325          103.267       NO       
+     COMPOSITE-1.68454          0.20125          9.97223          98.5778       NO       
+     COMPOSITE-1.68481         0.198775           8.8422          97.7674       NO       
+     COMPOSITE-1.68499         0.190729          9.46427           98.323       NO       
+     COMPOSITE-1.68519         0.206721          9.95033          93.7451       NO       
+     COMPOSITE-1.68705         0.147721           7.4453           125.56       NO       
+     COMPOSITE-1.68788          0.19211          9.49615          104.373       NO       
+     COMPOSITE-1.68794         0.207862          9.91335           91.828       NO       
+     COMPOSITE-1.68796         0.142712          7.29538          126.585       NO       
+     COMPOSITE-1.68824         0.167699          9.38755          96.0868       NO       
+     COMPOSITE-1.68832         0.168628          9.43195          100.178       NO       
+     COMPOSITE-1.69079        0.0987435          6.99597          117.521       NO       
+     COMPOSITE-1.69081         0.077418          7.95904          115.954       NO       
+     COMPOSITE-1.69116         0.194286          8.88109           94.481       NO       
+     COMPOSITE-1.69148        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.69191          0.13649          6.85239          130.886       NO       
+     COMPOSITE-1.69221         0.198124            9.231          100.809       NO       
+     COMPOSITE-1.69239         0.193064          8.65165          109.354       NO       
+     COMPOSITE-1.69286         0.177417          9.54138          88.5147       NO       
+     COMPOSITE-1.69311         0.202949          9.15964          95.9041       NO       
+     COMPOSITE-1.69440         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.69531          0.19283          9.22337           104.16       NO       
+     COMPOSITE-1.69553         0.118157          9.78601          94.5137       NO       
+     COMPOSITE-1.69576         0.195808          9.01283          95.0234       NO       
+     COMPOSITE-1.69580         0.127202          9.32658          98.8021       NO       
+     COMPOSITE-1.69624         0.180546           9.7658          95.0593       NO       
+     COMPOSITE-1.69713         0.150548          7.88016          96.7586       NO       
+     COMPOSITE-1.69748        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.69833         0.207571          9.62734          92.6611       NO       
+     COMPOSITE-1.69903         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.69908          0.16353          9.54138          88.9765       NO       
+     COMPOSITE-1.69923         0.153224           9.2078          94.9705       NO       
+     COMPOSITE-1.70090         0.177022          8.10626          93.5804       NO       
+     COMPOSITE-1.70104         0.191508          8.38585          93.3257       NO       
+     COMPOSITE-1.70114         0.164865           9.2078          94.6926       NO       
+     COMPOSITE-1.70127         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.70178         0.098743          9.96452          110.632       NO       
+     COMPOSITE-1.70236        0.0925657          8.85822          139.272       NO       
+     COMPOSITE-1.70327         0.167177          12.1644          162.152       NO       
+     COMPOSITE-1.70331         0.200375           9.7417          91.8973       NO       
+     COMPOSITE-1.70333         0.186687          9.54138          88.1027       NO       
+     COMPOSITE-1.70347         0.128263          9.11406          166.724       NO       
+     COMPOSITE-1.70375         0.183629          8.27799          96.7586       NO       
+     COMPOSITE-1.70376         0.172481           9.2078          94.3597       NO       
+     COMPOSITE-1.70379         0.192402          9.47828          100.414       NO       
+     COMPOSITE-1.70380        0.0979893          9.61317          124.303       NO       
+     COMPOSITE-1.70456         0.186687          9.54138          88.1027       NO       
+     COMPOSITE-1.70468         0.188801          9.60701          102.676       NO       
+     COMPOSITE-1.70474         0.150986          7.78028          121.883       NO       
+     COMPOSITE-1.70499         0.196923          8.91023            97.67       NO       
+     COMPOSITE-1.70502          0.20379          8.81069          96.4821       NO       
+     COMPOSITE-1.70512         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.70594         0.191282          9.54138          87.7446       NO       
+     COMPOSITE-1.70595         0.200375           8.7589          93.0216       NO       
+     COMPOSITE-1.70605         0.192402          8.61777          96.7586       NO       
+     COMPOSITE-1.70617         0.195354          8.96012          101.332       NO       
+     COMPOSITE-1.70618         0.176205           9.2078           93.962       NO       
+     COMPOSITE-1.70655         0.198631          8.73651          91.2242       NO       
+     COMPOSITE-1.70676         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.70693         0.198921          8.90409          93.4762       NO       
+     COMPOSITE-1.70704         0.200098          9.19132          104.948       NO       
+     COMPOSITE-1.70715         0.148534          9.15398            111.5       NO       
+     COMPOSITE-1.70792         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.70823         0.203346          9.21701          92.2554       NO       
+     COMPOSITE-1.70830         0.191282          9.54138          87.7446       NO       
+     COMPOSITE-1.70832         0.200375           8.7628          92.5609       NO       
+     COMPOSITE-1.70833         0.195354          9.03605          96.7586       NO       
+     COMPOSITE-1.70845         0.176205           9.2078           93.962       NO       
+     COMPOSITE-1.70846         0.192402          8.51162          102.243       NO       
+     COMPOSITE-1.70918         0.201735          9.95722          92.3911       NO       
+     COMPOSITE-1.70982         0.151168          7.56099          123.433       NO       
+     COMPOSITE-1.71043         0.186687          9.54138          88.1027       NO       
+     COMPOSITE-1.71046         0.200375          9.74008          92.2384       NO       
+     COMPOSITE-1.71071         0.191508          8.39079          92.8186       NO       
+     COMPOSITE-1.71085         0.172481           9.2078          94.3597       NO       
+     COMPOSITE-1.71087         0.192402          9.52071          96.7586       NO       
+     COMPOSITE-1.71152          0.17814          8.65185           117.07       NO       
+     COMPOSITE-1.71194         0.203387          9.06706          97.7941       NO       
+     COMPOSITE-1.71218         0.198673          8.95483          98.4862       NO       
+     COMPOSITE-1.71240         0.197813          8.95668          105.315       NO       
+     COMPOSITE-1.71248         0.177022          8.11232          93.0343       NO       
+     COMPOSITE-1.71249         0.177417          9.54138          88.5147       NO       
+     COMPOSITE-1.71253         0.183629          8.14249          103.148       NO       
+     COMPOSITE-1.71254         0.169388          7.86188          104.047       NO       
+     COMPOSITE-1.71256         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.71257         0.164865           9.2078          94.6926       NO       
+     COMPOSITE-1.71291         0.191915          12.1786          161.919       NO       
+     COMPOSITE-1.71414         0.195395          8.44109          104.268       NO       
+     COMPOSITE-1.71423         0.098743          7.39348          110.632       NO       
+     COMPOSITE-1.71428         0.098743          9.96452          110.632       NO       
+     COMPOSITE-1.71431          0.16353          9.54138          88.9765       NO       
+     COMPOSITE-1.71457         0.153224           9.2078          94.9705       NO       
+     COMPOSITE-1.71471        0.0979893          6.57251          123.683       NO       
+     COMPOSITE-1.71491        0.0446213          6.12146          125.345       NO       
+     COMPOSITE-1.71540         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.71547         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.71563         0.098743          6.99594          117.521       NO       
+     COMPOSITE-1.71565         0.098743          9.96452          110.632       NO       
+     COMPOSITE-1.71586        0.0585376          7.70633          140.864       NO       
+     COMPOSITE-1.71679         0.150548          7.67722          104.938       NO       
+     COMPOSITE-1.71686         0.137782           9.2078          95.2026       NO       
+     COMPOSITE-1.71690         0.098743          6.99594          117.521       NO       
+     COMPOSITE-1.71709         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.71737        0.0987435          9.96456          110.632       NO       
+     COMPOSITE-1.71832         0.198797           8.6916          99.8009       NO       
+     COMPOSITE-1.71891        0.0987435          7.11342          104.973       NO       
+     COMPOSITE-1.71923          0.12864           7.5931          105.823       NO       
+     COMPOSITE-1.71926         0.194853          9.72645          95.6025       NO       
+     COMPOSITE-1.71984         0.149447          7.57233          124.548       NO       
+     COMPOSITE-1.71985        0.0782897          7.95904          117.134       NO       
+     COMPOSITE-1.71999         0.201878          9.76067          99.2277       NO       
+     COMPOSITE-1.72018         0.194543            8.888          94.5477       NO       
+     COMPOSITE-1.72048         0.115224          8.95513          125.157       NO       
+     COMPOSITE-1.72195         0.199595          9.12933          97.4272       NO       
+     COMPOSITE-1.72196         0.146425          8.05384          119.015       NO       
+     COMPOSITE-1.72203         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.72270         0.192837          9.27254          104.256       NO       
+     COMPOSITE-1.72281         0.098743          6.99594          117.521       NO       
+     COMPOSITE-1.72290          0.16353          9.54138          88.9765       NO       
+     COMPOSITE-1.72291         0.177022          8.10626          93.5804       NO       
+     COMPOSITE-1.72299         0.153224           9.2078          94.9705       NO       
+     COMPOSITE-1.72300         0.193246          8.91379          98.9362       NO       
+     COMPOSITE-1.72330         0.117808          9.69715          118.126       NO       
+     COMPOSITE-1.72359         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.72392         0.190878           8.5531          95.7994       NO       
+     COMPOSITE-1.72422         0.195864          8.84296          107.592       NO       
+     COMPOSITE-1.72444         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.72447         0.098743          6.99594          117.521       NO       
+     COMPOSITE-1.72500         0.202806          9.09808          96.0102       NO       
+     COMPOSITE-1.72507         0.177417          9.54138          88.5147       NO       
+     COMPOSITE-1.72514         0.164865           9.2078          94.6926       NO       
+     COMPOSITE-1.72516         0.169388          8.02866          96.7586       NO       
+     COMPOSITE-1.72522          0.14556          9.54138          89.4774       NO       
+     COMPOSITE-1.72526         0.198201          8.64478          104.314       NO       
+     COMPOSITE-1.72530         0.183629          8.27799          96.7586       NO       
+     COMPOSITE-1.72557          0.13735          7.78732          126.811       NO       
+     COMPOSITE-1.72560         0.098743          7.11339          104.973       NO       
+     COMPOSITE-1.72587         0.098743          9.96452          110.632       NO       
+     COMPOSITE-1.72679         0.150548          7.88016          96.7586       NO       
+     COMPOSITE-1.72712         0.200375           9.7417          91.8973       NO       
+     COMPOSITE-1.72733         0.172481           9.2078          94.3597       NO       
+     COMPOSITE-1.72741         0.192402          8.61777          96.7586       NO       
+     COMPOSITE-1.72747         0.140255          7.28923          127.613       NO       
+     COMPOSITE-1.72773        0.0755953          7.95904          112.632       NO       
+     COMPOSITE-1.72786          0.13735          7.16221          123.683       NO       
+     COMPOSITE-1.72799        0.0904365          6.09866          136.989       NO       
+     COMPOSITE-1.72873        0.0882406          6.03387          134.024       NO       
+     COMPOSITE-1.72942          0.20283          8.94987          101.441       NO       
+     COMPOSITE-1.73009         0.200836          8.96482          102.587       NO       
+     COMPOSITE-1.73034         0.196145          8.76728          101.959       NO       
+     COMPOSITE-1.73048         0.128263          9.11407          166.724       NO       
+     COMPOSITE-1.73142         0.101116          6.45375          123.618       NO       
+     COMPOSITE-1.73206         0.116994          9.70344          105.021       NO       
+     COMPOSITE-1.73212        0.0979893          9.37967          123.683       NO       
+     COMPOSITE-1.73213         0.131159          8.82623          129.375       NO       
+     COMPOSITE-1.73214         0.177093          9.57631          92.0165       NO       
+     COMPOSITE-1.73238         0.098925          7.08162          126.468       NO       
+     COMPOSITE-1.73257         0.186687          9.54138          88.1027       NO       
+     COMPOSITE-1.73265         0.191508          8.39079          92.8186       NO       
+     COMPOSITE-1.73270         0.183629          8.14249          103.148       NO       
+     COMPOSITE-1.73364         0.195998          9.38267          107.462       NO       
+     COMPOSITE-1.73402         0.177417          9.54138          88.5147       NO       
+     COMPOSITE-1.73412         0.164865           9.2078          94.6926       NO       
+     COMPOSITE-1.73413         0.169388          7.86188          104.047       NO       
+     COMPOSITE-1.73417         0.176205           9.2078           93.962       NO       
+     COMPOSITE-1.73485         0.128914          9.27349          105.704       NO       
+     COMPOSITE-1.73490         0.128914          7.72164          104.464       NO       
+     COMPOSITE-1.73495         0.120042          6.71573          99.2495       NO       
+     COMPOSITE-1.73496         0.116994          7.65396          104.464       NO       
+     COMPOSITE-1.73502         0.115224          8.87027          123.683       NO       
+     COMPOSITE-1.73506        0.0782897          7.95904          117.134       NO       
+     COMPOSITE-1.73508        0.0979893          6.02398          130.652       NO       
+     COMPOSITE-1.73509        0.0987309          6.77807          131.666       NO       
+     COMPOSITE-1.73543         0.157699          7.93699          93.3921       NO       
+     COMPOSITE-1.73545          0.16353          9.54138          88.9765       NO       
+     COMPOSITE-1.73546         0.177022          8.11232          93.0343       NO       
+     COMPOSITE-1.73554         0.153224           9.2078          94.9705       NO       
+     COMPOSITE-1.73555         0.150548          7.67722          104.938       NO       
+     COMPOSITE-1.73634         0.138176          8.87765          106.383       NO       
+     COMPOSITE-1.73643         0.127041          6.71573          98.5991       NO       
+     COMPOSITE-1.73649         0.115224          6.21897          129.917       NO       
+     COMPOSITE-1.73674         0.128917           7.0342           122.84       NO       
+     COMPOSITE-1.73744        0.0825809          7.56715          120.632       NO       
+     COMPOSITE-1.73768         0.138176          7.84708          104.464       NO       
+     COMPOSITE-1.73772         0.131777          6.71573          97.8567       NO       
+     COMPOSITE-1.73783          0.13735          7.92994          123.683       NO       
+     COMPOSITE-1.73844         0.155848          9.81136          104.415       NO       
+     COMPOSITE-1.73898         0.200326          8.94161          95.3993       NO       
+     COMPOSITE-1.73920        0.0734412          9.40144          130.576       NO       
+     COMPOSITE-1.73921        0.0904365          6.27251          134.024       NO       
+     COMPOSITE-1.73929         0.192782          8.82511          96.5855       NO       
+     COMPOSITE-1.73935         0.140255           7.5184          123.683       NO       
+     COMPOSITE-1.73936        0.0755953          7.95904          112.632       NO       
+     COMPOSITE-1.73937          0.13735          6.85725          128.397       NO       
+     COMPOSITE-1.73967         0.060888          5.66897          134.024       NO       
+  
+  
+  *Step, name=Step-1, nlgeom=NO
+  *output, field
+  *output, history, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *boundary
+  *output, field
+  *elementoutput, directions=YES
+  *output, history, variable=PRESELECT
+  *endstep
+
+ ***WARNING: STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS 
+             ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.
+
+ ***NOTE: OUTPUT REQUEST PE IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE 
+          C3D10
+
+ ***NOTE: OUTPUT REQUEST PEEQ IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT 
+          TYPE C3D10
+
+ ***NOTE: OUTPUT REQUEST PEMAG IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT 
+          TYPE C3D10
+
+ ***WARNING: STRAIN OUTPUT REQUEST LE IS NOT VALID FOR SOME ELEMENTS IN THIS 
+             ANALYSIS. THIS REQUEST IS SWITCHED TO THE STRAIN MEASURE, E.
+
+ ***NOTE: OUTPUT REQUEST PE IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT TYPE 
+          C3D10
+
+ ***NOTE: OUTPUT REQUEST PEEQ IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT 
+          TYPE C3D10
+
+ ***NOTE: OUTPUT REQUEST PEMAG IS NOT AVAILABLE FOR THE MATERIAL FOR ELEMENT 
+          TYPE C3D10
+  *Step, name=Step-1, nlgeom=NO
+  *static
+  *boundary
+  *boundary
+  *boundary
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                 74010
+          NUMBER OF NODES IS                                   104573
+          NUMBER OF NODES DEFINED BY THE USER                  104573
+          TOTAL NUMBER OF VARIABLES IN THE MODEL               313719
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   12.000    
+       SYSTEM TIME (SEC)    =   2.5000    
+       TOTAL CPU TIME (SEC) =   14.500    
+       WALLCLOCK TIME (SEC) =         15
+1
+
+   Abaqus 2020                                  Date 05-Dec-2023   Time 17:11:07
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     S T A T I C   A N A L Y S I S
+
+
+                                                                                          
+
+     AUTOMATIC TIME CONTROL WITH -
+          A SUGGESTED INITIAL TIME INCREMENT OF                 1.00    
+          AND A TOTAL TIME PERIOD OF                            1.00    
+          THE MINIMUM TIME INCREMENT ALLOWED IS                1.000E-05
+          THE MAXIMUM TIME INCREMENT ALLOWED IS                 1.00    
+
+     LINEAR EQUATION SOLVER TYPE         DIRECT SPARSE
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          1.95E+12              633               4550
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      3 WARNING MESSAGES ON THE DAT FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =   274.50    
+       SYSTEM TIME (SEC)    =   2.1000    
+       TOTAL CPU TIME (SEC) =   276.60    
+       WALLCLOCK TIME (SEC) =        279

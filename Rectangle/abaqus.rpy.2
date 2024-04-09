@@ -1,0 +1,734 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2020 replay file
+# Internal Version: 2019_09_13-23.19.31 163176
+# Run by ASUS on Wed Dec  6 22:58:30 2023
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=160.25, 
+    height=160.0)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('Project2.cae')
+#: The model database "E:\Suresh1\Project2.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['XX'].parts['Composite']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+o3 = session.openOdb(name='E:/Suresh1/XX.odb')
+#: Model: E:/Suresh1/XX.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].view.setValues(width=32.7246, height=11.9672, 
+    viewOffsetX=0.23592, viewOffsetY=-0.161561)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.2022, 
+    farPlane=47.5328, width=31.6055, height=11.558, cameraPosition=(32.6718, 
+    12.1498, 17.0172), cameraUpVector=(-0.556017, 0.765367, -0.324127), 
+    cameraTarget=(0.343275, -0.357633, 5.31587), viewOffsetX=0.227852, 
+    viewOffsetY=-0.156036)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.4772, 
+    farPlane=47.2578, width=28.5675, height=10.447, viewOffsetX=0.0445169, 
+    viewOffsetY=-0.199947)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.4569, 
+    farPlane=47.3582, width=28.5456, height=10.439, cameraPosition=(32.9927, 
+    10.4544, 17.8301), cameraUpVector=(-0.491611, 0.786948, -0.37287), 
+    cameraTarget=(0.36384, -0.365153, 5.30874), viewOffsetX=0.0444828, 
+    viewOffsetY=-0.199794)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.5314, 
+    farPlane=46.2837, width=18.5669, height=6.78984, viewOffsetX=1.71226, 
+    viewOffsetY=-1.80086)
+odb = session.odbs['E:/Suresh1/XX.odb']
+session.writeFieldReport(fileName='abaqus.rpt', append=ON, 
+    sortItem='Element Label', odb=odb, step=0, frame=1, 
+    outputPosition=WHOLE_ELEMENT, variable=(('EVOL', WHOLE_ELEMENT), ), 
+    stepFrame=SPECIFY)
+odb = session.mdbData['XY']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Warning: Boundary conditions are shown in the local co-ordinate system, in which they were defined.
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.5631, 
+    farPlane=47.6077, width=22.6296, height=8.27555, viewOffsetX=2.94605, 
+    viewOffsetY=-0.818801)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=28.8735, 
+    farPlane=48.5158, width=25.5602, height=9.34724, cameraPosition=(34.5295, 
+    10.3587, 19.0652), cameraUpVector=(-0.424253, 0.789313, -0.44384), 
+    cameraTarget=(1.73164, 0.812708, 5.96301), viewOffsetX=3.32757, 
+    viewOffsetY=-0.924836)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.7892, 
+    farPlane=49.6002, width=35.6594, height=13.0405, viewOffsetX=2.27704, 
+    viewOffsetY=0.0354657)
+odb = session.mdbData['YY']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Warning: Boundary conditions are shown in the local co-ordinate system, in which they were defined.
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.mdbData['YY'])
+o3 = session.openOdb(name='E:/Suresh1/XY.odb')
+#: Model: E:/Suresh1/XY.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       6
+#: Number of Node Sets:          5
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['E:/Suresh1/XY.odb'])
+o3 = session.openOdb(name='E:/Suresh1/YY.odb')
+#: Model: E:/Suresh1/YY.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       5
+#: Number of Node Sets:          4
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.mdbData['ZZ']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+#: Warning: Boundary conditions are shown in the local co-ordinate system, in which they were defined.
+p = mdb.models['XX'].parts['Composite']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p1 = mdb.models['XY'].parts['Composite']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+mdb.Model(name='XZ', objectToCopy=mdb.models['XY'])
+#: The model "XZ" has been created.
+p = mdb.models['XZ'].parts['Composite']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['XY'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.models['XY'].boundaryConditions.delete(('BC-1', 'BC-2', 'BC-3', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.4514, 
+    farPlane=48.3914, width=31.3761, height=11.4741, cameraPosition=(26.0335, 
+    17.3666, -13.6391), cameraUpVector=(-0.579757, 0.660986, 0.476423), 
+    cameraTarget=(0.209787, -0.419582, 5.20979))
+mdb.models['XY'].ExpressionField(name='AnalyticalField-2', localCsys=None, 
+    description='', expression='(Z+5)/10')
+datum = mdb.models['XY'].rootAssembly.datums[7]
+mdb.models['XY'].analyticalFields['AnalyticalField-2'].setValues(
+    localCsys=datum)
+a = mdb.models['XY'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#92492481 ]', ), )
+region = regionToolset.Region(faces=faces1)
+datum = mdb.models['XY'].rootAssembly.datums[7]
+mdb.models['XY'].DisplacementBC(name='BC-1', createStepName='Step-1', 
+    region=region, u1=0.01, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-2', localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.3897, 
+    farPlane=46.8903, width=32.5802, height=11.9144, cameraPosition=(8.20316, 
+    31.5969, -10.5114), cameraUpVector=(-0.165867, 0.1388, 0.976331), 
+    cameraTarget=(0.290067, -0.483654, 5.19571))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.1722, 
+    farPlane=46.0349, width=33.5843, height=12.2817, cameraPosition=(5.21316, 
+    34.5275, 14.1814), cameraUpVector=(-0.296114, -0.51919, 0.801722), 
+    cameraTarget=(0.326915, -0.519771, 4.8914))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.4649, 
+    farPlane=45.7446, width=33.9601, height=12.419, cameraPosition=(5.57299, 
+    35.2818, 10.2773), cameraUpVector=(-0.272832, -0.428799, 0.861217), 
+    cameraTarget=(0.322113, -0.529837, 4.9435))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.8942, 
+    farPlane=46.7638, width=31.9446, height=11.682, cameraPosition=(-20.864, 
+    28.7336, 9.78246), cameraUpVector=(0.295834, -0.346998, 0.889986), 
+    cameraTarget=(0.674051, -0.442666, 4.95009))
+a = mdb.models['XY'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#b6db6d83 #1 ]', ), )
+region = regionToolset.Region(faces=faces1)
+mdb.models['XY'].boundaryConditions['BC-1'].setValues(region=region)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.2234, 
+    farPlane=45.7105, width=33.6503, height=12.3058, cameraPosition=(-4.22208, 
+    34.8076, 13.0182), cameraUpVector=(-0.36935, -0.562305, 0.73986), 
+    cameraTarget=(0.322702, -0.5709, 4.88177))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.5572, 
+    farPlane=47.3768, width=51.6961, height=18.905, viewOffsetX=5.12759, 
+    viewOffsetY=0.0339617)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=18.732, 
+    farPlane=44.8687, width=39.4331, height=14.4205, cameraPosition=(8.95129, 
+    17.974, 29.7115), cameraUpVector=(-0.45309, -0.820806, 0.347832), 
+    cameraTarget=(0.0528146, -3.83466, 1.71697), viewOffsetX=3.91126, 
+    viewOffsetY=0.0259055)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22.2319, 
+    farPlane=46.903, width=46.8007, height=17.1148, cameraPosition=(-7.89082, 
+    24.9954, 27.6588), cameraUpVector=(-0.18042, -0.894214, 0.40967), 
+    cameraTarget=(2.76642, -1.34866, 4.61733), viewOffsetX=4.64203, 
+    viewOffsetY=0.0307456)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.0166, 
+    farPlane=49.0206, width=52.6627, height=19.2585, cameraPosition=(-27.2661, 
+    -26.8223, 1.06814), cameraUpVector=(0.475685, -0.0351735, 0.878912), 
+    cameraTarget=(-9.23686, 4.55558, 6.44124), viewOffsetX=5.22347, 
+    viewOffsetY=0.0345966)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.654, 
+    farPlane=51.3028, width=51.8994, height=18.9794, cameraPosition=(-20.3692, 
+    -23.8815, -18.2578), cameraUpVector=(0.611541, -0.465287, 0.639941), 
+    cameraTarget=(-8.99886, -0.167064, 7.17516), viewOffsetX=5.14777, 
+    viewOffsetY=0.0340952)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.6019, 
+    farPlane=51.3549, width=51.7897, height=18.9393, cameraPosition=(-14.4661, 
+    -16.1478, -28.1081), cameraUpVector=(-0.79136, 0.380454, 0.478544), 
+    cameraTarget=(-3.09574, 7.56668, -2.67512), viewOffsetX=5.13689, 
+    viewOffsetY=0.0340231)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=29.3369, 
+    farPlane=53.015, width=61.7574, height=22.5844, cameraPosition=(-1.5256, 
+    39.861, -7.16716), cameraUpVector=(0.351977, -0.0787464, 0.93269), 
+    cameraTarget=(4.82117, 4.66444, 0.541192), viewOffsetX=6.12556, 
+    viewOffsetY=0.0405713)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.766, 
+    farPlane=56.7103, width=58.4506, height=21.3751, cameraPosition=(-26.1998, 
+    29.9964, 20.9706), cameraUpVector=(0.798082, -0.144216, 0.585036), 
+    cameraTarget=(-1.81577, 9.12864, 3.40778), viewOffsetX=5.79756, 
+    viewOffsetY=0.0383989)
+a = mdb.models['XY'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#3c ]', ), )
+region = regionToolset.Region(faces=faces1)
+mdb.models['XY'].DisplacementBC(name='BC-2', createStepName='Step-1', 
+    region=region, u1=0.01, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-2', localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.4577, 
+    farPlane=56.0207, width=57.8016, height=21.1378, cameraPosition=(-15.3739, 
+    33.9632, 24.8819), cameraUpVector=(0.332487, -0.665845, 0.667909), 
+    cameraTarget=(2.87303, 7.39496, 7.57082), viewOffsetX=5.73318, 
+    viewOffsetY=0.0379725)
+a = mdb.models['XZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['XY'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+del mdb.models['XY']
+del mdb.models['XZ']
+del mdb.models['YZ']
+a = mdb.models['XX'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+del mdb.jobs['XY']
+mdb.Model(name='XY', objectToCopy=mdb.models['XX'])
+#: The model "XY" has been created.
+a = mdb.models['XY'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.models['XY'].boundaryConditions.delete(('BC-1', 'BC-2', 'BC-3', ))
+datum = mdb.models['XY'].rootAssembly.datums[7]
+mdb.models['XY'].ExpressionField(name='AnalyticalField-1', localCsys=datum, 
+    description='', expression='(Y+5)/10')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.9833, 
+    farPlane=47.9373, width=32.0587, height=11.7237, cameraPosition=(-26.9083, 
+    8.39024, 28.1333), cameraUpVector=(0.311421, 0.820717, -0.479), 
+    cameraTarget=(0.209792, -0.419581, 5.20979))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.5013, 
+    farPlane=47.8185, width=32.7234, height=11.9668, cameraPosition=(20.1122, 
+    8.51499, 34.4474), cameraUpVector=(-0.377323, 0.829676, -0.411418), 
+    cameraTarget=(0.0484762, -0.420009, 5.18813))
+a = mdb.models['XY'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#b6db6d83 #1 ]', ), )
+region = regionToolset.Region(faces=faces1)
+datum = mdb.models['XY'].rootAssembly.datums[7]
+mdb.models['XY'].DisplacementBC(name='BC-1', createStepName='Step-1', 
+    region=region, u1=0.01, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=UNIFORM, fieldName='', 
+    localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(width=30.7224, height=11.235, 
+    viewOffsetX=0.117406, viewOffsetY=-0.136445)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.526, 
+    farPlane=47.2037, width=30.7898, height=11.2597, cameraPosition=(-8.09642, 
+    17.7254, 35.7052), cameraUpVector=(0.0132322, 0.637267, -0.77053), 
+    cameraTarget=(-0.00840878, -0.438681, 4.99454), viewOffsetX=0.117664, 
+    viewOffsetY=-0.136745)
+mdb.models['XY'].boundaryConditions['BC-1'].setValues(distributionType=FIELD, 
+    fieldName='AnalyticalField-1')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.5409, 
+    farPlane=47.189, width=30.8078, height=11.2663, cameraPosition=(-7.69057, 
+    17.527, 35.9294), cameraUpVector=(0.476897, -0.848274, 0.230218), 
+    cameraTarget=(0.397445, -0.637099, 5.21878), viewOffsetX=0.117733, 
+    viewOffsetY=-0.136825)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.7566, 
+    farPlane=47.0193, width=29.8618, height=10.9203, cameraPosition=(-14.9867, 
+    13.1672, -24.8328), cameraUpVector=(0.228729, 0.749949, 0.620694), 
+    cameraTarget=(0.380719, -0.355195, 5.49017), viewOffsetX=0.114118, 
+    viewOffsetY=-0.132624)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.8083, 
+    farPlane=47.5184, width=29.9241, height=10.9431, cameraPosition=(-12.8614, 
+    -23.6329, -19.164), cameraUpVector=(0.175871, 0.874514, -0.45199), 
+    cameraTarget=(0.337286, 0.252193, 5.20386), viewOffsetX=0.114356, 
+    viewOffsetY=-0.132901)
+a = mdb.models['XY'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#3c ]', ), )
+region = regionToolset.Region(faces=faces1)
+datum = mdb.models['XY'].rootAssembly.datums[7]
+mdb.models['XY'].DisplacementBC(name='BC-2', createStepName='Step-1', 
+    region=region, u1=0.01, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-1', localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.77, 
+    farPlane=46.4004, width=31.0841, height=11.3673, cameraPosition=(-23.2394, 
+    -2.34939, -22.5059), cameraUpVector=(0.369358, 0.928267, 0.0435254), 
+    cameraTarget=(0.447365, 0.0606108, 5.27216), viewOffsetX=0.118789, 
+    viewOffsetY=-0.138053)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.1471, 
+    farPlane=47.057, width=30.3328, height=11.0926, cameraPosition=(-17.7801, 
+    9.38321, 34.9872), cameraUpVector=(0.0779447, 0.795096, -0.601453), 
+    cameraTarget=(0.0501494, -0.102883, 4.48162), viewOffsetX=0.115918, 
+    viewOffsetY=-0.134716)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.6398, 
+    farPlane=45.5379, width=32.1334, height=11.7511, cameraPosition=(1.39616, 
+    10.4836, 39.505), cameraUpVector=(-0.139464, 0.799785, -0.583862), 
+    cameraTarget=(-0.235436, -0.0929665, 4.5198), viewOffsetX=0.122799, 
+    viewOffsetY=-0.142713)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.1796, 
+    farPlane=46.998, width=47.6348, height=17.4198, viewOffsetX=-0.35594, 
+    viewOffsetY=0.0358652)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22.9447, 
+    farPlane=49.2329, width=71.2091, height=26.0409, viewOffsetX=2.43788, 
+    viewOffsetY=0.331392)
+mdb.Model(name='YZ', objectToCopy=mdb.models['XY'])
+#: The model "YZ" has been created.
+a = mdb.models['YZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.models['YZ'].boundaryConditions.delete(('BC-1', 'BC-2', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.2663, 
+    farPlane=47.9367, width=32.4218, height=11.8565, cameraPosition=(30.5092, 
+    17.9158, 14.3887), cameraUpVector=(-0.712477, 0.64756, -0.270264), 
+    cameraTarget=(0.209787, -0.419582, 5.20979))
+datum = mdb.models['YZ'].rootAssembly.datums[7]
+mdb.models['YZ'].ExpressionField(name='AnalyticalField-2', localCsys=datum, 
+    description='', expression='(Z+5)/10')
+a = mdb.models['XY'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['YZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.8602, 
+    farPlane=48.459, width=31.9007, height=11.666, cameraPosition=(23.6895, 
+    16.2517, 27.7789), cameraUpVector=(-0.587187, 0.683165, -0.434161), 
+    cameraTarget=(0.206788, -0.420314, 5.21568))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.4416, 
+    farPlane=48.0356, width=32.6469, height=11.9388, cameraPosition=(19.6068, 
+    10.822, 34.1279), cameraUpVector=(-0.671312, 0.699962, -0.243707), 
+    cameraTarget=(0.198524, -0.431304, 5.22853))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.6516, 
+    farPlane=47.3723, width=34.1996, height=12.5067, cameraPosition=(6.76722, 
+    -12.1587, 39.2992), cameraUpVector=(-0.543771, 0.838543, 0.0340518), 
+    cameraTarget=(0.144993, -0.527115, 5.25009))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.0962, 
+    farPlane=47.7082, width=33.487, height=12.2461, cameraPosition=(33.647, 
+    12.5542, 13.4976), cameraUpVector=(-0.691497, 0.480387, 0.5395), 
+    cameraTarget=(0.454802, -0.242281, 4.95271))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.5376, 
+    farPlane=48.5417, width=32.7703, height=11.984, cameraPosition=(26.0013, 
+    -10.7858, 29.0766), cameraUpVector=(-0.674503, 0.577013, 0.460545), 
+    cameraTarget=(0.389158, -0.442675, 5.08647))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.647, 
+    farPlane=48.0029, width=32.9108, height=12.0353, cameraPosition=(25.3724, 
+    25.6788, 12.2815), cameraUpVector=(-0.868124, 0.245707, 0.431265), 
+    cameraTarget=(0.381445, 0.00455904, 4.88048))
+a = mdb.models['YZ'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#c ]', ), )
+region = regionToolset.Region(faces=faces1)
+mdb.models['YZ'].DisplacementBC(name='BC-1', createStepName='Step-1', 
+    region=region, u1=0.0, u2=0.01, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-2', localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23.8783, 
+    farPlane=49.7716, width=53.4754, height=19.5557, viewOffsetX=4.08652, 
+    viewOffsetY=2.63191)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21.1219, 
+    farPlane=43.6703, width=47.3026, height=17.2984, cameraPosition=(31.8651, 
+    0.231218, 11.0713), cameraUpVector=(-0.462072, 0.760471, 0.456261), 
+    cameraTarget=(-4.118, -1.82687, 4.78862), viewOffsetX=3.61481, 
+    viewOffsetY=2.3281)
+datum = mdb.models['YZ'].rootAssembly.datums[7]
+mdb.models['YZ'].boundaryConditions['BC-1'].setValues(localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21.6001, 
+    farPlane=45.603, width=48.3735, height=17.69, cameraPosition=(31.6453, 
+    9.43449, 11.4976), cameraUpVector=(-0.665523, 0.596312, 0.448878), 
+    cameraTarget=(-2.17461, -2.77505, 4.74266), viewOffsetX=3.69664, 
+    viewOffsetY=2.3808)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=19.0546, 
+    farPlane=42.8114, width=42.6729, height=15.6053, cameraPosition=(16.9749, 
+    -2.87419, 30.8539), cameraUpVector=(-0.643992, 0.760447, 0.0836319), 
+    cameraTarget=(-4.82556, -2.06939, 1.48414), viewOffsetX=3.26101, 
+    viewOffsetY=2.10023)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20.9423, 
+    farPlane=43.2516, width=46.9005, height=17.1513, cameraPosition=(30.865, 
+    4.99802, 12.8835), cameraUpVector=(-0.591502, 0.666521, 0.453734), 
+    cameraTarget=(-4.1529, -3.28902, 6.28353), viewOffsetX=3.58408, 
+    viewOffsetY=2.3083)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23.8518, 
+    farPlane=47.1217, width=53.4163, height=19.5341, cameraPosition=(-1.92566, 
+    27.4474, -17.9692), cameraUpVector=(0.798455, 0.0176065, 0.601797), 
+    cameraTarget=(-0.524727, -3.59296, 1.34461), viewOffsetX=4.08201, 
+    viewOffsetY=2.62899)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22.9998, 
+    farPlane=49.0863, width=51.5083, height=18.8364, cameraPosition=(-30.8217, 
+    13.4999, -8.88239), cameraUpVector=(0.738133, 0.667946, 0.0949135), 
+    cameraTarget=(-0.146095, -3.59856, 1.37132), viewOffsetX=3.9362, 
+    viewOffsetY=2.53508)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.5565, 
+    farPlane=49.7605, width=54.9946, height=20.1113, cameraPosition=(-35.9455, 
+    6.89182, 13.3752), cameraUpVector=(0.533649, 0.811237, -0.238985), 
+    cameraTarget=(-2.7898, -3.31026, 1.75162), viewOffsetX=4.20261, 
+    viewOffsetY=2.70666)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=28.4526, 
+    farPlane=49.8683, width=63.7201, height=23.3022, cameraPosition=(-4.34095, 
+    -2.08436, 44.3984), cameraUpVector=(-0.229509, 0.88805, -0.398364), 
+    cameraTarget=(-4.24363, -4.69643, 7.90652), viewOffsetX=4.8694, 
+    viewOffsetY=3.1361)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.3944, 
+    farPlane=53.0628, width=61.3502, height=22.4355, cameraPosition=(33.8284, 
+    -3.90923, 27.5095), cameraUpVector=(-0.377888, 0.925745, -0.0140261), 
+    cameraTarget=(0.981202, -4.38819, 11.4061), viewOffsetX=4.68829, 
+    viewOffsetY=3.01946)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.1493, 
+    farPlane=55.3732, width=60.8013, height=22.2348, cameraPosition=(36.5235, 
+    17.7114, -5.54206), cameraUpVector=(-0.44087, 0.383077, 0.811718), 
+    cameraTarget=(8.13534, -3.30916, 3.98344), viewOffsetX=4.64634, 
+    viewOffsetY=2.99244)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=28.8903, 
+    farPlane=52.5879, width=64.7004, height=23.6607, cameraPosition=(40.7413, 
+    -6.14796, 0.45737), cameraUpVector=(-0.257245, 0.667526, 0.698737), 
+    cameraTarget=(4.56424, -7.37851, 5.76708), viewOffsetX=4.9443, 
+    viewOffsetY=3.18434)
+a = mdb.models['YZ'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#b6db6db3 #1 ]', ), )
+region = regionToolset.Region(faces=faces1)
+datum = mdb.models['YZ'].rootAssembly.datums[7]
+mdb.models['YZ'].DisplacementBC(name='BC-2', createStepName='Step-1', 
+    region=region, u1=0.0, u2=0.01, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-2', localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=28.2612, 
+    farPlane=53.3081, width=63.2916, height=23.1455, cameraPosition=(40.103, 
+    -4.78642, -4.67655), cameraUpVector=(-0.185532, 0.375695, 0.907982), 
+    cameraTarget=(4.32228, -7.35854, 2.5074), viewOffsetX=4.83664, 
+    viewOffsetY=3.115)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.6651, 
+    farPlane=53.302, width=61.9567, height=22.6573, cameraPosition=(39.2587, 
+    -9.5033, 13.4437), cameraUpVector=(-0.588544, 0.168548, 0.790701), 
+    cameraTarget=(4.42851, -7.28785, 2.46933), viewOffsetX=4.73463, 
+    viewOffsetY=3.0493)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.3076, 
+    farPlane=55.2579, width=58.9166, height=21.5455, cameraPosition=(28.9889, 
+    26.2265, 19.181), cameraUpVector=(-0.745096, -0.211423, 0.63256), 
+    cameraTarget=(9.0215, -1.3221, 5.7325), viewOffsetX=4.50231, 
+    viewOffsetY=2.89968)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.0857, 
+    farPlane=55.0299, width=58.4197, height=21.3638, cameraPosition=(30.7167, 
+    13.8143, 29.0317), cameraUpVector=(-0.838831, -0.268857, 0.47337), 
+    cameraTarget=(8.4468, -3.31776, 5.6003), viewOffsetX=4.46434, 
+    viewOffsetY=2.87522)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23.3631, 
+    farPlane=57.7526, width=91.3138, height=33.3931, viewOffsetX=3.77444, 
+    viewOffsetY=5.13786)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22.5597, 
+    farPlane=55.9563, width=88.1739, height=32.2448, cameraPosition=(37.7674, 
+    4.34831, 18.1707), cameraUpVector=(-0.718533, 0.01388, 0.695354), 
+    cameraTarget=(6.18651, -6.59698, 3.29345), viewOffsetX=3.64465, 
+    viewOffsetY=4.96118)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=27.0175, 
+    farPlane=51.4984, width=42.2562, height=15.4529, viewOffsetX=5.0583, 
+    viewOffsetY=3.10082)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.6452, 
+    farPlane=51.8872, width=41.6738, height=15.2399, cameraPosition=(34.0286, 
+    19.2119, 14.8441), cameraUpVector=(-0.479038, -0.466307, 0.743694), 
+    cameraTarget=(8.12966, -2.55193, 0.913434), viewOffsetX=4.98858, 
+    viewOffsetY=3.05808)
+a = mdb.models['XY'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+mdb.Model(name='XZ', objectToCopy=mdb.models['XY'])
+#: The model "XZ" has been created.
+a = mdb.models['XZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+mdb.models['XZ'].boundaryConditions.delete(('BC-1', 'BC-2', ))
+datum = mdb.models['XZ'].rootAssembly.datums[7]
+mdb.models['XZ'].ExpressionField(name='AnalyticalField-3', localCsys=datum, 
+    description='', expression='(Z+5)/10')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.7296, 
+    farPlane=48.2258, width=31.7332, height=11.6047, cameraPosition=(-19.9401, 
+    12.6826, 32.7925), cameraUpVector=(0.307542, 0.756702, -0.576906), 
+    cameraTarget=(0.209791, -0.419582, 5.20979))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.9402, 
+    farPlane=48.0658, width=32.0035, height=11.7035, cameraPosition=(27.3303, 
+    19.0828, 19.8869), cameraUpVector=(-0.865394, 0.482596, 0.13489), 
+    cameraTarget=(0.0703011, -0.438468, 5.24787))
+a = mdb.models['XZ'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#b6db6d83 #1 ]', ), )
+region = regionToolset.Region(faces=faces1)
+datum = mdb.models['XZ'].rootAssembly.datums[7]
+mdb.models['XZ'].DisplacementBC(name='BC-1', createStepName='Step-1', 
+    region=region, u1=0.01, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-3', localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.5685, 
+    farPlane=47.2035, width=32.8098, height=11.9984, cameraPosition=(27.6259, 
+    23.1071, 10.2013), cameraUpVector=(-0.826018, 0.35735, 0.435884), 
+    cameraTarget=(0.0696344, -0.447552, 5.26973))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.8293, 
+    farPlane=46.8793, width=33.1444, height=12.1208, cameraPosition=(27.4549, 
+    23.7409, 7.11415), cameraUpVector=(-0.810412, 0.379542, 0.446296), 
+    cameraTarget=(0.0705713, -0.451024, 5.28664))
+session.viewports['Viewport: 1'].view.setValues(width=31.1041, height=11.3746, 
+    viewOffsetX=0.0057827, viewOffsetY=0.0636088)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25.6957, 
+    farPlane=46.6406, width=30.9947, height=11.3346, cameraPosition=(15.6874, 
+    32.1186, -0.535267), cameraUpVector=(-0.872572, 0.126458, 0.471834), 
+    cameraTarget=(0.1631, -0.484653, 5.33964), viewOffsetX=0.00576237, 
+    viewOffsetY=0.0633852)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24.5205, 
+    farPlane=47.8158, width=45.6102, height=16.6794, viewOffsetX=3.52616, 
+    viewOffsetY=-1.34564)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=19.8075, 
+    farPlane=42.6066, width=36.8435, height=13.4735, cameraPosition=(8.29378, 
+    -11.7287, 33.55), cameraUpVector=(-0.995593, -0.0690602, -0.0634522), 
+    cameraTarget=(-2.15165, -5.95512, -1.03391), viewOffsetX=2.8484, 
+    viewOffsetY=-1.087)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21.2366, 
+    farPlane=45.62, width=39.5018, height=14.4456, cameraPosition=(13.7042, 
+    -23.7071, -14.6392), cameraUpVector=(-0.984442, -0.0358546, -0.172015), 
+    cameraTarget=(-2.7338, 3.95209, 2.77489), viewOffsetX=3.05392, 
+    viewOffsetY=-1.16543)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21.1457, 
+    farPlane=45.7109, width=39.3328, height=14.3838, cameraPosition=(12.5609, 
+    -29.2727, -6.87852), cameraUpVector=(0.398822, 0.104317, 0.911076), 
+    cameraTarget=(-3.87713, -1.61349, 10.5356), viewOffsetX=3.04085, 
+    viewOffsetY=-1.16044)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21.2829, 
+    farPlane=44.7146, width=39.5881, height=14.4772, cameraPosition=(17.461, 
+    26.125, 16.3905), cameraUpVector=(0.019137, -0.660971, 0.750167), 
+    cameraTarget=(3.14615, -5.58447, 5.07299), viewOffsetX=3.06059, 
+    viewOffsetY=-1.16797)
+session.viewports['Viewport: 1'].view.setValues(width=42.0639, height=15.3826, 
+    viewOffsetX=3.27822, viewOffsetY=-1.08079)
+a = mdb.models['XZ'].rootAssembly
+f1 = a.instances['Composite-1'].faces
+faces1 = f1.getSequenceFromMask(mask=('[#3c ]', ), )
+region = regionToolset.Region(faces=faces1)
+datum = mdb.models['XZ'].rootAssembly.datums[7]
+mdb.models['XZ'].DisplacementBC(name='BC-2', createStepName='Step-1', 
+    region=region, u1=0.01, u2=0.0, u3=0.0, ur1=UNSET, ur2=UNSET, ur3=UNSET, 
+    amplitude=UNSET, fixed=OFF, distributionType=FIELD, 
+    fieldName='AnalyticalField-3', localCsys=datum)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23.2618, 
+    farPlane=42.7358, width=18.1956, height=6.65407, viewOffsetX=6.12439, 
+    viewOffsetY=-2.13934)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.5206, 
+    farPlane=42.9239, width=20.7447, height=7.58626, cameraPosition=(4.18516, 
+    32.8997, 16.7298), cameraUpVector=(0.204556, -0.579238, 0.789075), 
+    cameraTarget=(5.43525, -2.10475, 6.16482), viewOffsetX=6.98238, 
+    viewOffsetY=-2.43905)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=115.854, 
+    farPlane=153.451, width=118.89, height=43.4777, cameraPosition=(0.770645, 
+    128.511, 45.5872), viewOffsetX=7.01964, viewOffsetY=-0.91712)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.Job(name='XZ', model='XZ', description='', type=ANALYSIS, atTime=None, 
+    waitMinutes=0, waitHours=0, queue=None, memory=90, memoryUnits=PERCENTAGE, 
+    getMemoryFromAnalysis=True, explicitPrecision=SINGLE, 
+    nodalOutputPrecision=SINGLE, echoPrint=OFF, modelPrint=OFF, 
+    contactPrint=OFF, historyPrint=OFF, userSubroutine='', scratch='', 
+    resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
+mdb.jobs['XZ'].submit(consistencyChecking=OFF)
+#: The job input file "XZ.inp" has been submitted for analysis.
+#: Job XZ: Analysis Input File Processor completed successfully.
+#: Job XZ: Abaqus/Standard completed successfully.
+#: Job XZ completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.mdbData['ZZ'])
+o3 = session.openOdb(name='E:/Suresh1/XZ.odb')
+#: Model: E:/Suresh1/XZ.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['XZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.Job(name='XY', model='XY', description='', type=ANALYSIS, atTime=None, 
+    waitMinutes=0, waitHours=0, queue=None, memory=90, memoryUnits=PERCENTAGE, 
+    getMemoryFromAnalysis=True, explicitPrecision=SINGLE, 
+    nodalOutputPrecision=SINGLE, echoPrint=OFF, modelPrint=OFF, 
+    contactPrint=OFF, historyPrint=OFF, userSubroutine='', scratch='', 
+    resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
+mdb.jobs['XY'].submit(consistencyChecking=OFF)
+#: The job input file "XY.inp" has been submitted for analysis.
+#: Job XY: Analysis Input File Processor completed successfully.
+#: Job XY: Abaqus/Standard completed successfully.
+#: Job XY completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['E:/Suresh1/XZ.odb'])
+o3 = session.openOdb(name='E:/Suresh1/XY.odb')
+#: Model: E:/Suresh1/XY.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['XZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+mdb.Job(name='Job-6', model='YZ', description='', type=ANALYSIS, atTime=None, 
+    waitMinutes=0, waitHours=0, queue=None, memory=90, memoryUnits=PERCENTAGE, 
+    getMemoryFromAnalysis=True, explicitPrecision=SINGLE, 
+    nodalOutputPrecision=SINGLE, echoPrint=OFF, modelPrint=OFF, 
+    contactPrint=OFF, historyPrint=OFF, userSubroutine='', scratch='', 
+    resultsFormat=ODB, multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
+mdb.jobs.changeKey(fromName='Job-6', toName='YZ')
+mdb.jobs['YZ'].submit(consistencyChecking=OFF)
+#: The job input file "YZ.inp" has been submitted for analysis.
+#: Job YZ: Analysis Input File Processor completed successfully.
+#: Job YZ: Abaqus/Standard completed successfully.
+#: Job YZ completed successfully. 
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs['E:/Suresh1/XY.odb'])
+o3 = session.openOdb(name='E:/Suresh1/YZ.odb')
+#: Model: E:/Suresh1/YZ.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     1
+#: Number of Meshes:             1
+#: Number of Element Sets:       4
+#: Number of Node Sets:          3
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+odb = session.mdbData['YY']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+odb = session.mdbData['YZ']
+session.viewports['Viewport: 1'].setValues(displayedObject=odb)
+a = mdb.models['XZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON)
+a = mdb.models['YZ'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.7234, 
+    farPlane=51.809, width=41.7961, height=15.2847, cameraPosition=(34.1137, 
+    18.0684, 16.4724), cameraUpVector=(-0.614784, -0.296533, 0.730827), 
+    cameraTarget=(8.21477, -3.69546, 2.54173), viewOffsetX=5.00322, 
+    viewOffsetY=3.06705)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26.9379, 
+    farPlane=51.582, width=42.1317, height=15.4074, cameraPosition=(37.0213, 
+    10.9931, 16.4206), cameraUpVector=(-0.625043, -0.283163, 0.72742), 
+    cameraTarget=(7.41749, -4.63783, 1.66338), viewOffsetX=5.04338, 
+    viewOffsetY=3.09167)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=19.1888, 
+    farPlane=59.3312, width=125.062, height=45.7348, viewOffsetX=3.00813, 
+    viewOffsetY=5.94174)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=19.8649, 
+    farPlane=60.0329, width=129.469, height=47.3462, cameraPosition=(19.7736, 
+    31.975, 20.7689), cameraUpVector=(-0.43457, -0.619951, 0.653307), 
+    cameraTarget=(8.43487, 1.87722, 3.3321), viewOffsetX=3.11412, 
+    viewOffsetY=6.15109)
+mdb.save()
+#: The model database has been saved to "E:\Suresh1\Project2.cae".
+session.viewports['Viewport: 1'].view.setValues(nearPlane=28.469, 
+    farPlane=51.4288, width=32.9462, height=12.0483, viewOffsetX=1.20702, 
+    viewOffsetY=4.36587)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=33.993, 
+    farPlane=53.8074, width=39.3388, height=14.386, cameraPosition=(43.5347, 
+    -1.72291, 13.9563), cameraUpVector=(-0.621842, -0.029219, 0.782597), 
+    cameraTarget=(9.01251, -3.83253, 2.02941), viewOffsetX=1.44122, 
+    viewOffsetY=5.21299)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=28.5496, 
+    farPlane=59.2507, width=84.2675, height=30.8163, viewOffsetX=18.0508, 
+    viewOffsetY=1.76274)
+mdb.save()
+#: The model database has been saved to "E:\Suresh1\Project2.cae".
